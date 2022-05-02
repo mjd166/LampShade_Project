@@ -10,6 +10,6 @@ namespace _0_Framework.Application
     {
         public const string IsRequired = "این مقدار نمیتواند خالی باشد";
 
-
+        //public const string OutOfRange("محدوده عد")
     }
 }
