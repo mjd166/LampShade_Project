@@ -20,7 +20,7 @@ namespace ShopManagement.Application
             //if (_slideRepository.Exist(x => x.Heading == command.Heading))
             //    return operation.Failed(ApplicationMessages.DoublicatedRecord);
 
-            var slide = new Slide(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText);
+            var slide = new Slide(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text,command.Link, command.BtnText);
             _slideRepository.Create(slide);
             _slideRepository.Savechanges();
             return operation.Succedded();
@@ -34,7 +34,7 @@ namespace ShopManagement.Application
 
            // if (_slideRepository.Exist(x => x.Heading == command.Heading)) return operation.Failed(ApplicationMessages.DoublicatedRecord);
 
-            slide.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text, command.BtnText);
+            slide.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text,command.Link ,command.BtnText);
             _slideRepository.Savechanges();
             return operation.Succedded();
         }

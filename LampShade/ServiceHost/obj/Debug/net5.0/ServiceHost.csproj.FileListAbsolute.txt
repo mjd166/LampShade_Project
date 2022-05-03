@@ -173,3 +173,6 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Slides\Create.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Slides\Edit.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Slides\Index.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\01_LampshadeQuery.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\01_LampshadeQuery.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Slide\Default.cshtml.g.cs

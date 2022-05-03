@@ -1,6 +1,18 @@
-﻿body {
+﻿
+@font-face {
+    font-family: 'IranSans';
+    src: url('../fonts/IranianSans.eot'),
+        url('../fonts/IranianSans.eot')format('embedded-opentype'),
+        url('../fonts/IranianSans.woff')format('woff'),
+        url('../../assets/fonts/IranianSans.svg')format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
     direction: rtl;
     text-align: right;
+    font-family:'IranSans'
 }
 
 .hero-slider-content { text-align: right; }
@@ -183,4 +195,17 @@
 
 .product-details-small-image-slider-wrapper .slick-prev {
     left: 0;
+
+
+    
+}
+
+.hero-slider-item-wrapper.container img{
+
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+
 }

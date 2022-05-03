@@ -51,6 +51,17 @@ button.accept-policy {
   line-height: inherit;
 }
 
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('../AdminTheme/fonts/IranianSans.eot'),
+        url('../AdminTheme/fonts/IranianSans.eot')format('embedded-opentype'),
+        url('../AdminTheme/fonts/IranianSans.woff')format('woff'), 
+        url('../AdminTheme/fonts/IranianSans.svg')format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
