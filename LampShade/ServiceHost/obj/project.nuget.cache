@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iCJaT180iXK/SdlMsjwWdAhSn1edxxywXeA3MozSaGKqSXG0xez+Juu7GKTqVzWJKA9Ytix4lP7Nsl1+0bgXAQ==",
+  "dgSpecHash": "dKnDxnnTOwsqWcQsviaPnaJxH2es1q40MamSlleU78sJbNIiKO6kq/P4NLTICs1G8zfExAiuM7J3oRm/J65BVg==",
   "success": true,
   "projectFilePath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ServiceHost\\ServiceHost.csproj",
   "expectedPackageFiles": [
