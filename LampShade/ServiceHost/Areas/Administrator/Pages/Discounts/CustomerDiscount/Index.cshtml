@@ -16,7 +16,6 @@
         </p>
     </div>
 </div>
-<a href="E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\Areas\Administrator\Pages\Discounts\CustomerDiscount\Index.cshtml">E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\Areas\Administrator\Pages\Discounts\CustomerDiscount\Index.cshtml</a>
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
@@ -26,15 +25,13 @@
             <div class="panel-body">
                 <form class="form-inline" role="form" method="get">
                     <div class="form-group">
-                        <label class="sr-only" asp-for="@Model.SearchModel.StartDate"></label>
-                        <input class="form-control persianDateInput" asp-for="@Model.SearchModel.StartDate" >
+                        <label  class="sr-only"  asp-for="SearchModel.StartDate"></label>
+                        <input class="persianDateInput" asp-for="SearchModel.StartDate">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="@Model.SearchModel.EndDate"></label>
-                        <input class="form-control  persianDateInput" asp-for="@Model.SearchModel.EndDate" >
+                        <input class="form-control persianDateInput" asp-for="@Model.SearchModel.EndDate">
                     </div>
-
-
                     <div class="form-group">
                         <label class="sr-only" asp-for="@Model.SearchModel.ProductId"></label>
                         <select class="form-control" asp-for="@Model.SearchModel.ProductId" asp-items="@Model.Products">
@@ -70,6 +67,7 @@
                                     <th>تاریخ پایان</th>
                                     <th>علت تخفیف</th>
                                     <th>تاریخ ایجاد</th>
+                                    <th>عملیات</th>
                                    
                                    
                                 </tr>
@@ -77,17 +75,23 @@
                             <tbody>
                                 @foreach (var item in Model.CustomerDiscounts)
                                 {
-                                    <tr>
-                                        <td>@item.Id</td>
-                                        <td>
-                                            @item.Product
-                                        </td>
-                                        <td>@item.DiscountRate</td>
-                                        <td>@item.StartDate</td>
-                                        <td>@item.EndDate</td>
-                                        <td>@item.Reason</td>
-                                        <td>@item.CreationDate</td> 
-                                    </tr>
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>
+                                        @item.Product
+                                    </td>
+                                    <td>@item.DiscountRate</td>
+                                    <td>@item.StartDate</td>
+                                    <td>@item.EndDate</td>
+                                    <td>@item.Reason</td>
+                                    <td>@item.CreationDate</td>
+                                    <td>
+                                        <a class="btn btn-warning pull-right m-rl-5"
+                                           href="#showmodal=@Url.Page("./Index","Edit",new {id=item.Id })">
+                                            <i class="fa fa-edit"></i> ویرایش
+                                        </a>
+                                    </td>
+                                </tr>
                                 }
                             </tbody>
                         </table>

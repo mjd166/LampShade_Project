@@ -50,7 +50,7 @@
                     <select class="form-control" asp-for="CategoryId" asp-items='new SelectList(Model.Categories, "Id", "Name" )'>
                         <option value="0">گروه محصول</option>
                     </select>
-                    <span asp-validation-for="UnitPrice" class="error"></span>
+                    <span asp-validation-for="CategoryId" class="error"></span>
                 </div>
             </div>
 

@@ -15,3 +15,5 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.App
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Domain.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Domain.pdb

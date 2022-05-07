@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OkYg83PgDtIMmlW20LZJJ27FCRuX5DTCbYfS1JjWqr4SzGqIvNSBuWW4FOXW0Z+fQi6jDvqkGLJT1JPmViYV9g==",
+  "dgSpecHash": "Gvy6IMmNIZuOd/OhRA3LWsEiwhMMLL+pk5KV+55cou0JpupKOFeajzw38oDjIXiDC5k0G9oUjvF4wfLntfSPdw==",
   "success": true,
   "projectFilePath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\DiscountManagement.Application.Contracts\\DiscountManagement.Application.Contracts.csproj",
   "expectedPackageFiles": [

@@ -38,7 +38,7 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
         {
             var products = _shopContext.Products.Select(x => new { x.Id, x.Name }).ToList();
 
-            var query = _context.CustomerDiscounts.Include(x => x.ProductId).Select(x => new CustomerDiscountViewModel
+            var query = _context.CustomerDiscounts.Select(x => new CustomerDiscountViewModel
             {
                 Id = x.Id,
                 ProductId = x.ProductId,

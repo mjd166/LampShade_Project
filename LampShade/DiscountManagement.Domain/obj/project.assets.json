@@ -166,6 +166,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "ShopManagement.Application.Contracts": "1.0.0",
+          "ShopManagement.Domain": "1.0.0",
           "_0_Framework": "1.0.0"
         },
         "compile": {
@@ -186,6 +187,20 @@
         },
         "runtime": {
           "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
+        }
+      },
+      "ShopManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ShopManagement.Application.Contracts": "1.0.0",
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopManagement.Domain.dll": {}
         }
       },
       "_0_Framework/1.0.0": {
@@ -569,6 +584,11 @@
       "type": "project",
       "path": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj",
       "msbuildProject": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj"
+    },
+    "ShopManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ShopManagement.Domain/ShopManagement.Domain.csproj",
+      "msbuildProject": "../ShopManagement.Domain/ShopManagement.Domain.csproj"
     },
     "_0_Framework/1.0.0": {
       "type": "project",

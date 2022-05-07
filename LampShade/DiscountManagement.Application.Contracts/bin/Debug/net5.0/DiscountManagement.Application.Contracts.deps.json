@@ -9,6 +9,7 @@
       "DiscountManagement.Application.Contracts/1.0.0": {
         "dependencies": {
           "ShopManagement.Application.Contracts": "1.0.0",
+          "ShopManagement.Domain": "1.0.0",
           "_0_Framework": "1.0.0"
         },
         "runtime": {
@@ -147,6 +148,15 @@
           "ShopManagement.Application.Contracts.dll": {}
         }
       },
+      "ShopManagement.Domain/1.0.0": {
+        "dependencies": {
+          "ShopManagement.Application.Contracts": "1.0.0",
+          "_0_Framework": "1.0.0"
+        },
+        "runtime": {
+          "ShopManagement.Domain.dll": {}
+        }
+      },
       "_0_Framework/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.16"
@@ -262,6 +272,11 @@
       "hashPath": "system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
     },
     "ShopManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ShopManagement.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
