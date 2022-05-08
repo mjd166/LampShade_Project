@@ -1,4 +1,5 @@
 using DiscountManagement.Configuration;
+using InventoryManagement.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,7 @@ namespace ServiceHost
             var connectionstring = Configuration.GetConnectionString("LampshadeDb");
             ShopManagementBootstrapper.Configure(services, connectionstring);
             CustomerDiscountManagementBootstrapper.Configure(services, connectionstring);
+            InventoryManagementBootstrapper.Configure(services, connectionstring);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
