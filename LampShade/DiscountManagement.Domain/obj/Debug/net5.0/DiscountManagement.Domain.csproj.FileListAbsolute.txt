@@ -3,9 +3,13 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Dom
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ref\DiscountManagement.Domain.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\DiscountManagement.Domain.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\DiscountManagement.Application.Contracts.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\_0_Framework.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\DiscountManagement.Application.Contracts.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\_0_Framework.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\obj\Debug\net5.0\DiscountManagement.Domain.csproj.AssemblyReference.cache
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\obj\Debug\net5.0\DiscountManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\obj\Debug\net5.0\DiscountManagement.Domain.AssemblyInfoInputs.cache
@@ -15,7 +19,3 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Dom
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\obj\Debug\net5.0\DiscountManagement.Domain.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\obj\Debug\net5.0\ref\DiscountManagement.Domain.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\obj\Debug\net5.0\DiscountManagement.Domain.pdb
-E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
-E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.pdb

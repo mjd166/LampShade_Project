@@ -8,7 +8,7 @@ namespace DiscountManagement.Application.Contracts.ColleagueDiscount
         OperationResult Define(DefineColleagueDiscount command);
         OperationResult Edit(EditColleagueDiscount command);
         EditColleagueDiscount GetDetails(long id);
-        List<ColleagueDiscountViewModel> Search(ColleagueSearchModel searchModel);
+        List<ColleagueDiscountViewModel> Search(ColleagueDiscountSearchModel searchModel);
         OperationResult Remove(long id);
         OperationResult Restore(long id);
 
