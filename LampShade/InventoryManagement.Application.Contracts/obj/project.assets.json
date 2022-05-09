@@ -161,6 +161,19 @@
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
+      "ShopManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
+        }
+      },
       "_0_Framework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -533,6 +546,11 @@
         "version.txt"
       ]
     },
+    "ShopManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj",
+      "msbuildProject": "../ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj"
+    },
     "_0_Framework/1.0.0": {
       "type": "project",
       "path": "../_0_Framework/_0_Framework.csproj",
@@ -541,6 +559,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ShopManagement.Application.Contracts >= 1.0.0",
       "_0_Framework >= 1.0.0"
     ]
   },
@@ -575,6 +594,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+              "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
+            },
             "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj": {
               "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj"
             }

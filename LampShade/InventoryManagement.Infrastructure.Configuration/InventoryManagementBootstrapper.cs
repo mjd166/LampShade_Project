@@ -12,7 +12,7 @@ namespace InventoryManagement.Infrastructure.Configuration
     {
         public static void Configure(IServiceCollection services, string constring)
         {
-            services.AddTransient<IInventoryApplication,InventoryApplication>
+            services.AddTransient<IInventoryApplication, InventoryApplication>();
             services.AddTransient<IInventoryRepository, InventoryRepository>();
             services.AddDbContext<InventoryContext>(options => options.UseSqlServer(constring));
         }

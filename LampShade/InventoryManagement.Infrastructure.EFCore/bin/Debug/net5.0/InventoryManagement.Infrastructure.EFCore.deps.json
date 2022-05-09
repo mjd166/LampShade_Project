@@ -1072,6 +1072,7 @@
       },
       "InventoryManagement.Application.Contracts/1.0.0": {
         "dependencies": {
+          "ShopManagement.Application.Contracts": "1.0.0",
           "_0_Framework": "1.0.0"
         },
         "runtime": {

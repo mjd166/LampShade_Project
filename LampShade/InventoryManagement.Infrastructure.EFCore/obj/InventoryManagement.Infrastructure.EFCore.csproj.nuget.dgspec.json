@@ -31,6 +31,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+                "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
+              },
               "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj": {
                 "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj"
               }
