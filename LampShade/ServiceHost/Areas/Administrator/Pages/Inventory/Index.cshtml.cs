@@ -102,5 +102,11 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
             return new JsonResult(_inventoryApplication.Reduce(command));
         }
 
+        public IActionResult OnGetLog(long id)
+        {
+            var log = _inventoryApplication.GetOperationLog(id);
+            return Partial("OperationLog", log);
+        }
+
     }
 }

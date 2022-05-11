@@ -106,6 +106,12 @@
                                                href="#showmodal=@Url.Page("./Index","Reduce",new {id=item.Id })">
                                                 <i class="fa fa-minus"></i> کاهش موجودی
                                             </a>
+                                            <a class="btn btn-primary pull-right m-rl-5"
+                                               href="#showmodal=@Url.Page("./Index","Log",new {id=item.Id })"
+                                                onclick="$('.modal-dialog').css('width','60%')">
+                                                
+                                                <i class="fa fa-recycle"></i> مشاهده گردش انبار
+                                            </a>
                                         </td>
                                     </tr>
                                 }

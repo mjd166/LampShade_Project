@@ -11,6 +11,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
     public class ProductRepository : RepositoryBase<long, Product>, IProductRepository
     {
         private readonly ShopContext _context;
+      
 
         public ProductRepository(ShopContext context) : base(context)
         {
@@ -23,7 +24,6 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             {
                 Id = x.Id,
                 Name = x.Name,
-                UnitPrice = x.UnitPrice,
                 Code = x.Code,
                 CategoryId = x.CategoryId,
                 Slug = x.Slug,
@@ -57,10 +57,10 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Name = x.Name,
                 CategoryId = x.CategoryId,
                 Picture = x.Picture,
-                UnitPrice = x.UnitPrice,
+              
                 Category = x.Category.Name,
                 CreationDate = x.CreationDate.ToFarsi(),
-                IsInStock = x.IsInStock
+              
 
             }); ;
 

@@ -67,8 +67,8 @@
                                     <th>عکس</th>
                                     <th>نام</th>
                                     <th>کد محصول</th>
-                                    <th>قیمت</th>
-                                    <th>موجودی</th>
+                                   
+                                  
                                     <th>تاریخ ایجاد</th>
                                     <th>
                                         گروه
@@ -87,19 +87,8 @@
                                         </td>
                                         <td>@item.Name</td>
                                         <td>@item.Code</td>
-                                        <td>@item.UnitPrice</td>
-                                        <td class="text-center">
-                                            @if (item.IsInStock)
-                                            {
-
-
-                                                <i class="fa fa-check text-success fa-2x"></i>
-                                            }
-                                            else
-                                            {
-                                                <i class="fa fa-remove text-danger fa-2x"></i>
-                                            }
-                                        </td>
+                                       
+                                       
                                         <td>@item.CreationDate</td>
                                         <td>@item.Category</td>
                                         <td>
@@ -109,24 +98,7 @@
                                             </a>
                                         </td>
 
-                                        <td>
-
-                                            @if (item.IsInStock)
-                                            {
-                                                <a class="btn btn-danger waves-effect waves-light m-l-10" asp-page="./Index" asp-page-handler="NotInStock" asp-route-id="@item.Id">
-                                                    اتمام موجودی
-                                                </a>
-                                            }
-                                            else
-                                            {
-                                                <a class="btn btn-success waves-effect waves-light m-l-10" asp-page="./Index" asp-page-handler="InStock" asp-route-id="@item.Id">
-                                                    موجود شد
-                                                </a>
-                                            }
-
-
-
-                                        </td>
+                                      
                                     </tr>
                                 }
                             </tbody>

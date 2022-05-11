@@ -8,8 +8,8 @@ namespace InventoryManagement.Domain.InventoryAgg
         public bool Operation { get; private set; }
         public long Count { get; private set; }
         public long OperatorId { get; private set; }
-        public DateTime CreationDate{ get; private set; }
-        public long CurrentDiscount { get; private set; }
+        public DateTime OperationDate{ get; private set; }
+        public long Currentcount { get; private set; }
         public string Description { get; private set; }
         public long OrderId { get; private set; }
         public long InventoryId { get; private set; }
@@ -25,10 +25,11 @@ namespace InventoryManagement.Domain.InventoryAgg
             Operation = operation;
             Count = count;
             OperatorId = operatorId;
-            CurrentDiscount = currentDiscount;
+            Currentcount = currentDiscount;
             Description = description;
             OrderId = orderId;
             InventoryId = inventoryId;
+            OperationDate = DateTime.Now;
         }
     }
 }

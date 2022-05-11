@@ -58,10 +58,7 @@ namespace InventoryManagement.Infrastructure.EFCore.Migrations
                             b1.Property<long>("Count")
                                 .HasColumnType("bigint");
 
-                            b1.Property<DateTime>("CreationDate")
-                                .HasColumnType("datetime2");
-
-                            b1.Property<long>("CurrentDiscount")
+                            b1.Property<long>("Currentcount")
                                 .HasColumnType("bigint");
 
                             b1.Property<string>("Description")
@@ -73,6 +70,9 @@ namespace InventoryManagement.Infrastructure.EFCore.Migrations
 
                             b1.Property<bool>("Operation")
                                 .HasColumnType("bit");
+
+                            b1.Property<DateTime>("OperationDate")
+                                .HasColumnType("datetime2");
 
                             b1.Property<long>("OperatorId")
                                 .HasColumnType("bigint");
