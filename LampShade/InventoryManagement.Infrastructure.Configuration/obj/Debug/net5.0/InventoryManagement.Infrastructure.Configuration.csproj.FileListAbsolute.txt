@@ -3,6 +3,7 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.In
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\ref\InventoryManagement.Infrastructure.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.Configuration.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Application.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
@@ -10,6 +11,7 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.In
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\_0_Framework.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Application.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
@@ -25,5 +27,3 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.In
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\obj\Debug\net5.0\InventoryManagement.Infrastructure.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\obj\Debug\net5.0\ref\InventoryManagement.Infrastructure.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\obj\Debug\net5.0\InventoryManagement.Infrastructure.Configuration.pdb
-E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Application.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Infrastructure.Configuration\bin\Debug\net5.0\InventoryManagement.Application.pdb

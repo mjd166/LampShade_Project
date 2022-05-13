@@ -2,7 +2,9 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Ap
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\InventoryManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\ref\InventoryManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\_0_Framework.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\_0_Framework.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.csproj.AssemblyReference.cache
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
@@ -13,5 +15,3 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Ap
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\ref\InventoryManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\obj\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
-E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\InventoryManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
