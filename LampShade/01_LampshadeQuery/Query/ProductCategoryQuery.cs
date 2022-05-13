@@ -1,5 +1,9 @@
-﻿using _01_LampshadeQuery.Contracts.ProductCategory;
+﻿using _01_LampshadeQuery.Contracts.Product;
+using _01_LampshadeQuery.Contracts.ProductCategory;
+using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Infrastructure.EFCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -27,6 +31,39 @@ namespace _01_LampshadeQuery.Query
 
 
             }).ToList();
+        }
+
+        public List<ProductCategoryQueryViewModel> GetProductCategoriesWithProducts()
+        {
+            return _context.ProductCategories.Include(x => x.Products)
+                .ThenInclude(x=>x.Category).Select(x => new ProductCategoryQueryViewModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+
+                Products = MapProducts(x.Products)
+            }).ToList();
+        }
+
+        private List<ProductQueryModel> MapProducts(List<Product> products)
+        {
+            var result = new List<ProductQueryModel>();
+            foreach (var product in products)
+            {
+                var item = new ProductQueryModel
+                {
+                    Id = product.Id,
+                    Name = product.Name,
+                    Picture = product.Picture,
+                    PictureAlt = product.PictureAlt,
+                    PictureTitle = product.PictureTitle,
+                    Category = product.Category.Name,
+                    Slug = product.Slug
+                };
+                result.Add(item);
+            }
+
+            return result;
         }
     }
 }
