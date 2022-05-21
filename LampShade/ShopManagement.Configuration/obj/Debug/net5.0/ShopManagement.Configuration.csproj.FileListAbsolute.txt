@@ -3,6 +3,12 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configu
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ref\ShopManagement.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Configuration.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\01_LampshadeQuery.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contracts.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Application.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Domain.dll
@@ -12,6 +18,12 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configu
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Application.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\ShopManagement.Domain.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\_0_Framework.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.csproj.AssemblyReference.cache
