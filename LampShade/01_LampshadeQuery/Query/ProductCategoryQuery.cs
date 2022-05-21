@@ -36,7 +36,7 @@ namespace _01_LampshadeQuery.Query
                 Id = x.Id
 
 
-            }).ToList();
+            }).AsNoTracking().ToList();
         }
 
         public List<ProductCategoryQueryViewModel> GetProductCategoriesWithProducts()
@@ -54,7 +54,7 @@ namespace _01_LampshadeQuery.Query
                     Id = x.Id,
                     Name = x.Name,
                     Products = MapProducts(x.Products)
-                }).ToList();
+                }).AsNoTracking().ToList();
 
 
             foreach (var category in categories)
@@ -121,7 +121,7 @@ namespace _01_LampshadeQuery.Query
                     Slug = x.Slug,
                    
                     Products = MapProducts(x.Products)
-                }).FirstOrDefault(x => x.Slug == slug);
+                }).AsNoTracking().FirstOrDefault(x => x.Slug == slug);
 
             foreach (var product in category.Products)
             {
@@ -142,8 +142,6 @@ namespace _01_LampshadeQuery.Query
                         product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
                     }
                 }
-
-
             }
 
             return category;
