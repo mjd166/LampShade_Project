@@ -17,18 +17,18 @@ namespace ServiceHost
 
         public string Upload(IFormFile file, string path)
         {
-            if (file == null) return string.Empty;
+            if (file == null) return "";
 
-            var Directorypath = $"{_webHostEnvironment.WebRootPath}//ProductPictures//{path}";
-            if (!Directory.Exists(Directorypath))           
-                Directory.CreateDirectory(Directorypath);
+            var directoryPath = $"{_webHostEnvironment.WebRootPath}//ProductPictures//{path}";
 
-            var filename = $"{DateTime.Now.ToFileName()}-{file.FileName}";
+            if (!Directory.Exists(directoryPath))
+                Directory.CreateDirectory(directoryPath);
 
-            var filepath = $"{Directorypath}//{filename}";
-            using var output = File.Create(filepath);
-            file.CopyToAsync(output);
-            return $"{path}//{filename}";
+            var fileName = $"{DateTime.Now.ToFileName()}-{file.FileName}";
+            var filePath = $"{directoryPath}//{fileName}";
+            using var output = File.Create(filePath);
+            file.CopyTo(output);
+            return $"{path}/{fileName}";
         }
     }
 }

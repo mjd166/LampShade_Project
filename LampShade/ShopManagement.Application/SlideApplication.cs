@@ -10,7 +10,7 @@ namespace ShopManagement.Application
         private readonly IFileUploader _fileUploader;
         private readonly ISlideRepository _slideRepository;
 
-        private string _slidepath = "Slides//";
+        private string _slidepath = "Slides";
 
         public SlideApplication(ISlideRepository slideRepository, IFileUploader fileUploader)
         {
