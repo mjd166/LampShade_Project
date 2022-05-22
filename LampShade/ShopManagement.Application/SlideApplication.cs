@@ -7,11 +7,15 @@ namespace ShopManagement.Application
 {
     public class SlideApplication : ISlideApplication
     {
+        private readonly IFileUploader _fileUploader;
         private readonly ISlideRepository _slideRepository;
 
-        public SlideApplication(ISlideRepository slideRepository)
+        private string _slidepath = "Slides//";
+
+        public SlideApplication(ISlideRepository slideRepository, IFileUploader fileUploader)
         {
             _slideRepository = slideRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateSlide command)
@@ -20,7 +24,9 @@ namespace ShopManagement.Application
             //if (_slideRepository.Exist(x => x.Heading == command.Heading))
             //    return operation.Failed(ApplicationMessages.DoublicatedRecord);
 
-            var slide = new Slide(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text,command.Link, command.BtnText);
+            var filename = _fileUploader.Upload(command.Picture, _slidepath);
+            
+            var slide = new Slide(filename, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text,command.Link, command.BtnText);
             _slideRepository.Create(slide);
             _slideRepository.Savechanges();
             return operation.Succedded();
@@ -32,9 +38,10 @@ namespace ShopManagement.Application
             var slide = _slideRepository.Get(command.Id);
             if (slide == null) return operation.Failed(ApplicationMessages.RecordNotFound);
 
-           // if (_slideRepository.Exist(x => x.Heading == command.Heading)) return operation.Failed(ApplicationMessages.DoublicatedRecord);
+            // if (_slideRepository.Exist(x => x.Heading == command.Heading)) return operation.Failed(ApplicationMessages.DoublicatedRecord);
 
-            slide.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text,command.Link ,command.BtnText);
+            var filename = _fileUploader.Upload(command.Picture, _slidepath);
+            slide.Edit(filename, command.PictureAlt, command.PictureTitle, command.Heading, command.Title, command.Text,command.Link ,command.BtnText);
             _slideRepository.Savechanges();
             return operation.Succedded();
         }

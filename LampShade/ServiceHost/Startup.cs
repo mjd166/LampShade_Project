@@ -1,3 +1,4 @@
+using _0_Framework.Application;
 using DiscountManagement.Configuration;
 using InventoryManagement.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -31,6 +32,9 @@ namespace ServiceHost
             ShopManagementBootstrapper.Configure(services, connectionstring);
             CustomerDiscountManagementBootstrapper.Configure(services, connectionstring);
             InventoryManagementBootstrapper.Configure(services, connectionstring);
+
+            services.AddTransient<IFileUploader, FileUploader>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

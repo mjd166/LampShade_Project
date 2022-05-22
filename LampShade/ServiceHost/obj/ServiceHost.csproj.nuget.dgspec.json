@@ -880,6 +880,9 @@
               },
               "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj": {
                 "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj"
+              },
+              "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj": {
+                "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj"
               }
             }
           }
@@ -979,6 +982,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -1348,6 +1357,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.16, )"

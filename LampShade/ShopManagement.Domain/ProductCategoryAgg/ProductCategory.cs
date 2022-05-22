@@ -35,14 +35,15 @@ namespace ShopManagement.Domain.ProductCategoryAgg
             Keywords = keywords;
             Metadescription = metadescription;
             Slug = slug;
-           
+
         }
 
         public void Edit(string name, string description, string picture, string pictureAlt, string pictureTitle, string keywords, string metadescription, string slug)
         {
             Name = name;
             Description = description;
-            Picture = picture;
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Keywords = keywords;

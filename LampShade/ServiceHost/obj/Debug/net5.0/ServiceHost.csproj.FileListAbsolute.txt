@@ -215,3 +215,7 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Menu\Default.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Footer\Default.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\System.IO.Pipelines.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
