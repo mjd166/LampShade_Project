@@ -49,85 +49,74 @@
                                         <div class="big-image-wrapper">
                                             <div class="product-details-big-image-slider-wrapper product-details-big-image-slider-wrapper--bottom-space ht-slick-slider"
                                                  data-slick-setting='{
-            "slidesToShow": 1,
-            "slidesToScroll": 1,
-            "arrows": false,
-            "autoplay": false,
-            "autoplaySpeed": 5000,
-            "fade": true,
-            "speed": 500,
-            "prevArrow": {"buttonClass": "slick-prev", "iconClass": "fa fa-angle-left" },
-            "nextArrow": {"buttonClass": "slick-next", "iconClass": "fa fa-angle-right" }
-        }' data-slick-responsive='[
-            {"breakpoint":1501, "settings": {"slidesToShow": 1, "arrows": false} },
-            {"breakpoint":1199, "settings": {"slidesToShow": 1, "arrows": false} },
-            {"breakpoint":991, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} },
-            {"breakpoint":767, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} },
-            {"breakpoint":575, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} },
-            {"breakpoint":479, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} }
-        ]'>
+                                                         "slidesToShow": 1,
+                                                         "slidesToScroll": 1,
+                                                         "arrows": false,
+                                                         "autoplay": false,
+                                                         "autoplaySpeed": 5000,
+                                                         "fade": true,
+                                                         "speed": 500,
+                                                         "prevArrow": {"buttonClass": "slick-prev", "iconClass": "fa fa-angle-left" },
+                                                         "nextArrow": {"buttonClass": "slick-next", "iconClass": "fa fa-angle-right" }
+                                                     }' data-slick-responsive='[
+                                                         {"breakpoint":1501, "settings": {"slidesToShow": 1, "arrows": false} },
+                                                         {"breakpoint":1199, "settings": {"slidesToShow": 1, "arrows": false} },
+                                                         {"breakpoint":991, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} },
+                                                         {"breakpoint":767, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} },
+                                                         {"breakpoint":575, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} },
+                                                         {"breakpoint":479, "settings": {"slidesToShow": 1, "arrows": false, "slidesToScroll": 1} }
+                                                     ]'>
                                                 <div class="single-image">
-                                                    <img src="assets/img/products/big1-1.jpg" class="img-fluid"
-                                                         alt="">
+                                                    <img src="~/ProductPictures/@Model.Product.Picture" class="img-fluid"
+                                                         alt="@Model.Product.PictureAlt" title="@Model.Product.PictureTitle">
                                                 </div>
-                                                <div class="single-image">
-                                                    <img src="assets/img/products/big1-2.jpg" class="img-fluid"
-                                                         alt="">
-                                                </div>
-                                                <div class="single-image">
-                                                    <img src="assets/img/products/big1-3.jpg" class="img-fluid"
-                                                         alt="">
-                                                </div>
-                                                <div class="single-image">
-                                                    <img src="assets/img/products/big1-4.jpg" class="img-fluid"
-                                                         alt="">
-                                                </div>
-                                                <div class="single-image">
-                                                    <img src="assets/img/products/big1-5.jpg" class="img-fluid"
-                                                         alt="">
-                                                </div>
+                                                @foreach (var picture in Model.Product.Pictures)
+                                                {
+
+                                                    <div class="single-image">
+                                                        <img src="~/ProductPictures/@picture.Picture" class="img-fluid"
+                                                             alt="@picture.PictureAlt" title="@picture.PictureTitle">
+                                                    </div>
+                                                }
+
                                             </div>
                                         </div>
 
 
                                         <div class="product-details-small-image-slider-wrapper product-details-small-image-slider-wrapper--horizontal-space ht-slick-slider"
                                              data-slick-setting='{
-        "slidesToShow": 4,
-        "slidesToScroll": 1,
-        "arrows": true,
-        "autoplay": false,
-        "autoplaySpeed": 5000,
-        "speed": 500,
-        "asNavFor": ".product-details-big-image-slider-wrapper",
-        "focusOnSelect": true,
-        "centerMode": false,
-        "prevArrow": {"buttonClass": "slick-prev", "iconClass": "fa fa-angle-left" },
-        "nextArrow": {"buttonClass": "slick-next", "iconClass": "fa fa-angle-right" }
-    }' data-slick-responsive='[
-        {"breakpoint":1501, "settings": {"slidesToShow": 3, "arrows": false} },
-        {"breakpoint":1199, "settings": {"slidesToShow": 3, "arrows": false} },
-        {"breakpoint":991, "settings": {"slidesToShow": 5, "arrows": false, "slidesToScroll": 1} },
-        {"breakpoint":767, "settings": {"slidesToShow": 3, "arrows": false, "slidesToScroll": 1} },
-        {"breakpoint":575, "settings": {"slidesToShow": 3, "arrows": false, "slidesToScroll": 1} },
-        {"breakpoint":479, "settings": {"slidesToShow": 2, "arrows": false, "slidesToScroll": 1} }
-    ]'>
+                                                "slidesToShow": 4,
+                                                "slidesToScroll": 1,
+                                                "arrows": true,
+                                                "autoplay": false,
+                                                "autoplaySpeed": 5000,
+                                                "speed": 500,
+                                                "asNavFor": ".product-details-big-image-slider-wrapper",
+                                                "focusOnSelect": true,
+                                                "centerMode": false,
+                                                "prevArrow": {"buttonClass": "slick-prev", "iconClass": "fa fa-angle-left" },
+                                                "nextArrow": {"buttonClass": "slick-next", "iconClass": "fa fa-angle-right" }
+                                            }' data-slick-responsive='[
+                                                {"breakpoint":1501, "settings": {"slidesToShow": 3, "arrows": false} },
+                                                {"breakpoint":1199, "settings": {"slidesToShow": 3, "arrows": false} },
+                                                {"breakpoint":991, "settings": {"slidesToShow": 5, "arrows": false, "slidesToScroll": 1} },
+                                                {"breakpoint":767, "settings": {"slidesToShow": 3, "arrows": false, "slidesToScroll": 1} },
+                                                {"breakpoint":575, "settings": {"slidesToShow": 3, "arrows": false, "slidesToScroll": 1} },
+                                                {"breakpoint":479, "settings": {"slidesToShow": 2, "arrows": false, "slidesToScroll": 1} }
+                                            ]'>
                                             <div class="single-image">
-                                                <img src="assets/img/products/big1-1.jpg" class="img-fluid" alt="">
+                                                <img src="~/ProductPictures/@Model.Product.Picture" class="img-fluid"
+                                                     alt="@Model.Product.PictureAlt" title="@Model.Product.PictureTitle">
                                             </div>
-                                            <div class="single-image">
-                                                <img src="assets/img/products/big1-2.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="single-image">
-                                                <img src="assets/img/products/big1-3.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="single-image">
-                                                <img src="assets/img/products/big1-4.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="single-image">
-                                                <img src="assets/img/products/big1-5.jpg" class="img-fluid" alt="">
-                                            </div>
+                                            @foreach (var picture in Model.Product.Pictures)
+                                            {
+
+                                                <div class="single-image">
+                                                    <img src="~/ProductPictures/@picture.Picture" class="img-fluid"
+                                                         alt="@picture.PictureAlt" title="@picture.PictureTitle">
+                                                </div>
+                                            }
                                         </div>
-                                    </div>
 
                                     <!--=======  End of product details slider area  =======-->
                                 </div>
@@ -226,11 +215,11 @@
 
 
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
-                      
+
                         <div class="product-description-review-area">
                             <div class="row">
                                 <div class="col-lg-12">
@@ -253,7 +242,7 @@
                                                 <!--=======  product description  =======-->
 
                                                 <div class="product-description">
-                                                   @Model.Product.Description
+                                                    @Model.Product.Description
                                                 </div>
 
                                                 <!--=======  End of product description  =======-->
