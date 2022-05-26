@@ -220,3 +220,4 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Comments\Index.cshtml.g.cs
