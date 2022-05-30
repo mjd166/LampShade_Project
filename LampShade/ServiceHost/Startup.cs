@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using BlogManagement.Infrastructure.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,7 @@ namespace ServiceHost
             ShopManagementBootstrapper.Configure(services, connectionstring);
             CustomerDiscountManagementBootstrapper.Configure(services, connectionstring);
             InventoryManagementBootstrapper.Configure(services, connectionstring);
+            BlogManagementBootstrapper.Configure(services, connectionstring);
 
             services.AddTransient<IFileUploader, FileUploader>();
 
