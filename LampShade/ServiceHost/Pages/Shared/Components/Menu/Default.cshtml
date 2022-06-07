@@ -1,8 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model _01_LampshadeQuery.MenuModel
+
 <div class="header-area header-sticky">
     <div class="container">
         <div class="row">
@@ -249,24 +246,28 @@
                     <li class="menu-item-has-children">
                         <a href="#">محصولات</a>
                         <ul class="sub-menu">
-                            <li>
-                                <a href="blog-left-sidebar.html">دکوری</a>
-                            </li>
-                            <li>
-                                <a href="blog-right-sidebar.html">نگه دانده</a>
-                            </li>
+                            @foreach (var item in Model.ProductCategories)
+                            {
+                                <li>
+                                    <a asp-page="/ProductCategory" asp-route-id="@item.Slug">@item.Name</a>
+                                </li>
+                            }
+
+                           
                         </ul>
                     </li>
 
                     <li class="menu-item-has-children">
                         <a href="#">مقالات</a>
                         <ul class="sub-menu">
-                            <li>
-                                <a href="blog-left-sidebar.html">گروه 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-right-sidebar.html">گروه 2</a>
-                            </li>
+                            @foreach (var item in Model.ArticleCategories)
+                            {
+                                <li>
+                                    <a asp-page="/ArticleCategory">@item.Name</a>
+                                </li>
+                            }
+
+
                         </ul>
                     </li>
 

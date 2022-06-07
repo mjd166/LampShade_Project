@@ -10,6 +10,8 @@ namespace BolgManagement.Application.Contracts.ArticleCategory
         EditArticleCategory GetDetials(long id);
        
         List<ArticleCategoryViewModel> Search(ArticleCategorySearchModel searchModel);
+
+        List<ArticleCategoryViewModel> GetArticleCategories();
     }
 
 }

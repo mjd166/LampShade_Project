@@ -35,3 +35,9 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configu
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManagement.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\BolgManagement.Application.Contracts.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ShopManagement.Configuration\bin\Debug\net5.0\BolgManagement.Application.Contracts.pdb

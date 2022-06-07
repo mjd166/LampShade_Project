@@ -207,7 +207,7 @@
                             <a class="waves-effect"><i class="md md-mail"></i><span>سیستم بلاگینگ</span><span class="pull-right"><i class="md md-add"></i></span></a>
                             <ul class="list-unstyled">
                                 <li><a asp-page="/Blog/Articles/Index">مقالات</a></li>
-                                <li><a asp-page="/Blog/ArticlesCategories/Index">گروه مقالات</a></li>
+                                <li><a asp-page="/Blog/ArticleCategories/Index">گروه مقالات</a></li>
 
                             </ul>
                         </li>
@@ -323,21 +323,22 @@
 
         $('.persianDateInput').persianDatepicker({
             format: 'YYYY/MM/DD',
-            autoClose: true
+            autoClose: true,
+            initialValueType:'persian'
         });
     </script>
     @RenderSection("Scripts", false)
-    <!-- <script type="text/javascript"> -->
-    <!-- /* ============================================== -->
-    <!-- Counter Up -->
-    <!-- =============================================== */ -->
-    <!-- jQuery(document).ready(function($) { -->
-    <!-- $('.counter').counterUp({ -->
-    <!-- delay: 100, -->
-    <!-- time: 1200 -->
-    <!-- }); -->
-    <!-- }); -->
-    <!-- </script> -->
-
+    //s0z286blagdj711pbf82ycu73hbrtl3lk70lwe1jkbt14cv3
+    <script src="https://cdn.tiny.cloud/1/s0z286blagdj711pbf82ycu73hbrtl3lk70lwe1jkbt14cv3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#BodyContent',
+            plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+        });
+    </script>
 </body>
 </html>

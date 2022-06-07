@@ -7,6 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using BolgManagement.Application.Contracts.Article;
 using BlogManagement.Domain.ArticleAgg;
+using _01_LampshadeQuery.Contracts.Article;
+using _01_LampshadeQuery.Query;
+using _01_LampshadeQuery.Contracts.ArticleCategory;
 
 namespace BlogManagement.Infrastructure.Configuration
 {
@@ -18,6 +21,8 @@ namespace BlogManagement.Infrastructure.Configuration
             services.AddTransient<IArticleCategoryRepository, ArticleCategoryRepository>();
             services.AddTransient<IArticleApplication, ArticleApplication>();
             services.AddTransient<IArticleRepository, ArticleRepository>();
+            services.AddTransient<IArticleQuery, ArticleQuery>();
+            services.AddTransient<IArticleCategoryQuery, ArticleCategoryQuery>();
             services.AddDbContext<BlogContext>(options => options.UseSqlServer(connectionstring));
         }
     }

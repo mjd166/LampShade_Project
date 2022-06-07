@@ -234,3 +234,9 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blog\ArticleCategories\Create.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blog\ArticleCategories\Edit.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blog\ArticleCategories\Index.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blog\Articles\Create.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blog\Articles\Edit.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blog\Articles\Index.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestBlogPost\Default.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Article.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\ArticleCategory.cshtml.g.cs

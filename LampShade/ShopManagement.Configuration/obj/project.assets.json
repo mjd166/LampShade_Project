@@ -1580,6 +1580,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "BlogManagement.Infrastructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Infrastructure.EFCore": "1.0.0",
           "ShopManagement.Infrastructure.EFCore": "1.0.0"
@@ -1589,6 +1590,50 @@
         },
         "runtime": {
           "bin/placeholder/01_LampshadeQuery.dll": {}
+        }
+      },
+      "BlogManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BolgManagement.Application.Contracts": "1.0.0",
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Domain.dll": {}
+        }
+      },
+      "BlogManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BlogManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.16",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16"
+        },
+        "compile": {
+          "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "BolgManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BolgManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BolgManagement.Application.Contracts.dll": {}
         }
       },
       "DiscountManagement.Application.Contracts/1.0.0": {
@@ -6079,6 +6124,21 @@
       "type": "project",
       "path": "../01_LampshadeQuery/01_LampshadeQuery.csproj",
       "msbuildProject": "../01_LampshadeQuery/01_LampshadeQuery.csproj"
+    },
+    "BlogManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Domain/BlogManagement.Domain.csproj",
+      "msbuildProject": "../BlogManagement.Domain/BlogManagement.Domain.csproj"
+    },
+    "BlogManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj"
+    },
+    "BolgManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../BolgManagement.Application.Contracts/BolgManagement.Application.Contracts.csproj",
+      "msbuildProject": "../BolgManagement.Application.Contracts/BolgManagement.Application.Contracts.csproj"
     },
     "DiscountManagement.Application.Contracts/1.0.0": {
       "type": "project",

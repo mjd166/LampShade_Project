@@ -1,0 +1,136 @@
+﻿@page
+@model Areas.Administrator.Pages.Blog.Articles.CreateModel
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["Title"] = "ایجاد مقاله";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">ایجاد مقاله جدید</h3>
+            </div>
+            <div class="panel-body">
+                <form method="post" enctype="multipart/form-data">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.Title" class="control-label">عنوان</label>
+                                <input type="text" class="form-control" asp-for="@Model.Createarticle.Title" onchange="makeSlug('Title', 'Slug')">
+                                <span asp-validation-for="@Model.Createarticle.Title" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.Slug" class="control-label">اسلاگ</label>
+                                <input type="text" class="form-control" asp-for="@Model.Createarticle.Slug">
+                                <span asp-validation-for="@Model.Createarticle.Slug" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.PublishDate" class="control-label">تاریخ انتشار</label>
+                                <input type="text" class="form-control persianDateInput" asp-for="@Model.Createarticle.PublishDate">
+                                <span asp-validation-for="@Model.Createarticle.PublishDate" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.Picture" class="control-label">عکس</label>
+                                <input type="file" class="form-control" asp-for="@Model.Createarticle.Picture" accept="image/*">
+                                <span asp-validation-for="@Model.Createarticle.Picture" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.CategoryId">گروه مقاله</label>
+                                <select class="form-control" asp-for="@Model.Createarticle.CategoryId" asp-items='Model._ArticleCategories'>
+                                    <option value="0">گروه مقالات ..</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.PictureAlt" class="control-label">alt عکس</label>
+                                <input type="text" class="form-control" asp-for="@Model.Createarticle.PictureAlt">
+                                <span asp-validation-for="@Model.Createarticle.PictureAlt" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.PictureTitle" class="control-label"> عنوان عکس</label>
+                                <input type="text" class="form-control" asp-for="@Model.Createarticle.PictureTitle">
+                                <span asp-validation-for="@Model.Createarticle.PictureTitle" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
+                                <label asp-for="@Model.Createarticle.ShortDescription" class="control-label">توضیحات کوتاه</label>
+                                <textarea class="form-control autogrow" asp-for="@Model.Createarticle.ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription')"
+                                          style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                                <span asp-validation-for="@Model.Createarticle.ShortDescription" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
+                                <label asp-for="@Model.Createarticle.Description" class="control-label">توضیحات</label>
+                                <textarea class="form-control" id="BodyContent" asp-for="@Model.Createarticle.Description" onchange="fillField('Description', 'MetaDescription')"
+                                          style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                                <span asp-validation-for="@Model.Createarticle.Description" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="@Model.Createarticle.Keywords" class="control-label">کلمات کلیدی</label>
+                                <input type="text" class="form-control" asp-for="@Model.Createarticle.Keywords">
+                                <span asp-validation-for="@Model.Createarticle.Keywords" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
+                                <label asp-for="@Model.Createarticle.MetaDescription" class="control-label">توضیحات متا</label>
+                                <textarea class="form-control autogrow" asp-for="@Model.Createarticle.MetaDescription"
+                                          style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                                <span asp-validation-for="@Model.Createarticle.MetaDescription" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
+                                <label asp-for="@Model.Createarticle.CanonicalAddress" class="control-label">CanonicalAddress</label>
+                                <textarea class="form-control autogrow" asp-for="@Model.Createarticle.CanonicalAddress"
+                                          style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                                <span asp-validation-for="@Model.Createarticle.CanonicalAddress" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">ایجاد مقاله</button>
+                    <a asp-page="./Index" class="btn btn-primary"> بازگشت </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

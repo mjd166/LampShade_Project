@@ -31,6 +31,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj"
+              },
               "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
                 "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"
               },
@@ -244,6 +247,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\01_LampshadeQuery\\01_LampshadeQuery.csproj": {
+                "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\01_LampshadeQuery\\01_LampshadeQuery.csproj"
+              },
               "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\BlogManagement.Application\\BlogManagement.Application.csproj": {
                 "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\BlogManagement.Application\\BlogManagement.Application.csproj"
               },

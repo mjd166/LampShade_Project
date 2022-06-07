@@ -1,0 +1,85 @@
+﻿@model List<_01_LampshadeQuery.Contracts.Article.ArticleQueryModel>
+
+<div class="blog-post-slider-area">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!--=======  blog post slider border wrapper  =======-->
+                <div class="blog-post-slider-border-wrapper section-space--inner">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!--=======  section title  =======-->
+                            <div class="section-title-wrapper text-center section-space--half">
+                                <h2 class="section-title">آخرین مقالات پست شده</h2>
+                                <p class="section-subtitle">
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                                </p>
+                            </div>
+                            <!--=======  End of section title  =======-->
+                        </div>
+                        <div class="col-lg-12">
+                            <!--=======  blog post slider wrapper  =======-->
+                            <div class="blog-post-slider-wrapper">
+                                <div class="ht-slick-slider" data-slick-setting='{
+                                    "slidesToShow": 3,
+                                    "slidesToScroll": 1,
+                                    "arrows": false,
+                                    "autoplay": true,
+                                    "autoplaySpeed": 1000,
+                                    "speed": 1000,
+                                    "infinite": true,
+                                    "rtl": true
+                                }' data-slick-responsive='[
+                                    {"breakpoint":1501, "settings": {"slidesToShow": 3} },
+                                    {"breakpoint":1199, "settings": {"slidesToShow": 3} },
+                                    {"breakpoint":991, "settings": {"slidesToShow": 2} },
+                                    {"breakpoint":767, "settings": {"slidesToShow": 1} },
+                                    {"breakpoint":575, "settings": {"slidesToShow": 1} },
+                                    {"breakpoint":479, "settings": {"slidesToShow": 1} }
+                                ]'>
+
+                                    @foreach (var article in Model)
+                                    {
+                                        <div class="col">
+
+                                            <div class="single-slider-post">
+                                                <div class="single-slider-post__image">
+                                                    <a asp-page="/Article" asp-route-id="@article.Slug">
+                                                        <img src="~/ProductPictures/@article.Picture" title="@article.PictureTitle"
+                                                             class="img-fluid" alt="@article.PictureAlt">
+                                                    </a>
+                                                    <div class="single-slider-post__date-sticker">
+                                                        <span class="month" >@article.PublishDate</span>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="single-slider-post__content">
+                                                    <h3 class="title">
+                                                        <a asp-page="/Article" asp-route-id="@article.Slug">
+                                                            @article.Title
+                                                        </a>
+                                                    </h3>
+                                                    @*<p class="post-meta">by <a href="#">HasTech</a></p>*@
+                                                    <p class="short-desc">
+                                                        @article.ShortDescription
+                                                    </p>
+                                                    <a asp-page="/Article" asp-route-id="@article.Slug" class="blog-post-link">
+                                                        مطالعه بیشتر
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
