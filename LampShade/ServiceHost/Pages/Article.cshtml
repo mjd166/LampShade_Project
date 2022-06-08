@@ -1,7 +1,9 @@
 ﻿@page "{id}"
 @model ServiceHost.Pages.ArticleModel
 @{
-    ViewData["Title"] = "صفحه مقاله";
+    ViewData["Title"] = Model.Article.Title;
+    ViewData["keyword"] = Model.Article.Keywords;
+    ViewData["metaDescription"] = Model.Article.MetaDescription;
 }
 <div class="breadcrumb-area section-space--half">
     <div class="container wide">

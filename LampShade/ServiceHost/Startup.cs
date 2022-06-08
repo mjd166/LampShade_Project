@@ -12,6 +12,8 @@ using ShopManagement.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 using System.Threading.Tasks;
 
 namespace ServiceHost
@@ -36,6 +38,8 @@ namespace ServiceHost
             BlogManagementBootstrapper.Configure(services, connectionstring);
 
             services.AddTransient<IFileUploader, FileUploader>();
+
+            services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
 
         }
 

@@ -1,7 +1,9 @@
 ﻿@page "{id}"
 @model ServiceHost.Pages.ProductCategoryModel
 @{
-    ViewData["Title"] = "گروه محصولات";
+    ViewData["Title"] = Model.ProductCategory.Name;
+    ViewData["keyword"] = Model.ProductCategory.Keywords;
+    ViewData["metaDescription"] = Model.ProductCategory.MetaDescription;
 }
 
 <div class="breadcrumb-area section-space--half">
@@ -12,8 +14,8 @@
                 <div class="breadcrumb-wrapper breadcrumb-bg">
                     <!--=======  breadcrumb content  =======-->
                     <div class="breadcrumb-content">
-                        <h2 class="breadcrumb-content__title">@Model.ProductCategory.Name</h2>
-                        <h3>@Model.ProductCategory.Description</h3>
+                        <h1 class="breadcrumb-content__title">@Model.ProductCategory.Name</h1>
+                        <h2>@Model.ProductCategory.Description</h2>
                         <ul class="breadcrumb-content__page-map">
                             <li><a asp-page="./Index">صفحه ی اصلی</a></li>
                             <li class="active">@Model.ProductCategory.Name</li>
@@ -112,11 +114,11 @@
                                                             </span>
                                                         </div>
 
-                                                        <h3 class="single-grid-product__title">
+                                                        <h2 class="single-grid-product__title">
                                                             <a asp-page="/Product" asp-route-id="@product.Slug">
                                                                 @product.Name
                                                             </a>
-                                                        </h3>
+                                                        </h2>
                                                         <p class="single-grid-product__price">
                                                             @if (product.HasDiscount)
                                                             {
