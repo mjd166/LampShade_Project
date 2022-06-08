@@ -11,7 +11,7 @@ namespace _01_LampshadeQuery.Query
     public class ArticleQuery : IArticleQuery
     {
         private readonly BlogContext _blogContext;
-       
+
 
         public ArticleQuery(BlogContext blogContext)
         {
@@ -20,7 +20,7 @@ namespace _01_LampshadeQuery.Query
 
         public ArticleQueryModel GetArticelDetails(string slug)
         {
-            var article= _blogContext.Articles
+            var article = _blogContext.Articles
                    .Where(x => x.PublishDate <= DateTime.Now)
                    .Include(x => x.ArticleCategory)
                    .Select(x => new ArticleQueryModel
@@ -40,10 +40,10 @@ namespace _01_LampshadeQuery.Query
                        Keywords = x.Keywords,
                        CanonicalAddress = x.CanonicalAddress,
                        CategorySlug = x.ArticleCategory.Slug,
-                       
-                   }).FirstOrDefault(x=>x.Slug==slug);
 
-            article.KeywordList = article.Keywords.Split('،').ToList();
+                   }).FirstOrDefault(x => x.Slug == slug);
+            if (!string.IsNullOrWhiteSpace(article.Keywords))
+                article.KeywordList = article.Keywords.Split('،').ToList();
 
             return article;
         }
@@ -51,22 +51,22 @@ namespace _01_LampshadeQuery.Query
         public List<ArticleQueryModel> GetLatestArticles()
         {
             return _blogContext.Articles
-                .Where(x=>x.PublishDate <= DateTime.Now)
+                .Where(x => x.PublishDate <= DateTime.Now)
                 .Include(x => x.ArticleCategory)
                 .Select(x => new ArticleQueryModel
-            {
-                Id=x.Id,
-                Title = x.Title,
-                Picture = x.Picture,
-                PictureAlt = x.PictureAlt,
-                PictureTitle = x.PictureTitle,
-                ShortDescription = x.ShortDescription,
-                PublishDate = x.PublishDate.ToFarsi(),
-                Slug = x.Slug,
-                
-            }).OrderByDescending(x=>x.Id).Take(5).ToList();
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+                    ShortDescription = x.ShortDescription,
+                    PublishDate = x.PublishDate.ToFarsi(),
+                    Slug = x.Slug,
+
+                }).OrderByDescending(x => x.Id).Take(5).ToList();
         }
 
-       
+
     }
 }

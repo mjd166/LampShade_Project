@@ -9,12 +9,12 @@
             <div class="col-lg-12">
                 <div class="breadcrumb-wrapper breadcrumb-bg">
                     <div class="breadcrumb-content">
-                        <h2 class="breadcrumb-content__title">Blog</h2>
+                        <h1 class="breadcrumb-content__title">@Model.ArticleCategory.Name</h1>
                         <ul class="breadcrumb-content__page-map">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a asp-page="/Index">صفحه اصلی </a>
                             </li>
-                            <li class="active">Blog</li>
+                            <li class="active">@Model.ArticleCategory.Name</li>
                         </ul>
                     </div>
                 </div>
@@ -35,105 +35,39 @@
                                 <!--=======  blog page content  =======-->
                                 <div class="blog-page-content">
                                     <div class="row">
-
-                                        <div class="col-md-6">
-                                            <!--=======  single blog post  =======-->
-                                            <div class="single-blog-post">
-                                                <div class="single-blog-post__image">
-                                                    <a href="blog-post-left-sidebar.html">
-                                                        <img src="assets/img/blog/slider/1-370x235.jpg"
-                                                             class="img-fluid" alt="">
-                                                    </a>
-
-                                                </div>
-                                                <div class="single-blog-post__content">
-                                                    <h3 class="title">
-                                                        <a href="blog-post-left-sidebar.html">
-                                                            Buy Used Furniture and
-                                                            Used Decor
+                                        @foreach (var article in Model.ArticleCategory.Articles)
+                                        {
+                                            <div class="col-md-6">
+                                                <!--=======  single blog post  =======-->
+                                                <div class="single-blog-post">
+                                                    <div class="single-blog-post__image">
+                                                        <a asp-page="./Article" asp-route-id="@article.Slug">
+                                                            <img src="~/ProductPictures/@article.Picture"
+                                                                 class="img-fluid" alt="@article.PictureAlt" title="@article.PictureTitle">
                                                         </a>
-                                                    </h3>
-                                                    <p class="post-meta">
-                                                        <span class="date">Oct 3, 2019</span>
-                                                        <span class="separator">|</span> by <a href="#">HasTech</a>
-                                                    </p>
-                                                    <p class="short-desc">
-                                                        It's no secret, engines and transmissions
-                                                        can be very expensive Lorem ipsum dolor sit amet consectetur
-                                                        adipisicing elit. A, consequatur....
-                                                    </p>
-                                                    <a href="blog-post-left-sidebar.html"
-                                                       class="blog-post-link">Read More</a>
+
+                                                    </div>
+                                                    <div class="single-blog-post__content">
+                                                        <h3 class="title">
+                                                            <a asp-page="./Article" asp-route-id="@article.Slug">
+                                                                @article.Title
+                                                            </a>
+                                                        </h3>
+                                                        <p class="post-meta">
+                                                            <span class="date">@article.PublishDate</span>
+                                                           
+                                                        </p>
+                                                        <p class="short-desc">
+                                                            @article.ShortDescription
+                                                        </p>
+                                                        <a asp-page="./Article" asp-route-id="@article.Slug"
+                                                           class="blog-post-link">ادامه مطلب</a>
+                                                    </div>
                                                 </div>
+                                                <!--=======  End of single blog post  =======-->
                                             </div>
-                                            <!--=======  End of single blog post  =======-->
-                                        </div>
+                                        }
 
-                                        <div class="col-md-6">
-                                            <!--=======  single blog post  =======-->
-                                            <div class="single-blog-post">
-                                                <div class="single-blog-post__image">
-                                                    <a href="blog-post-left-sidebar.html">
-                                                        <img src="assets/img/blog/slider/1-370x235.jpg"
-                                                             class="img-fluid" alt="">
-                                                    </a>
-
-                                                </div>
-                                                <div class="single-blog-post__content">
-                                                    <h3 class="title">
-                                                        <a href="blog-post-left-sidebar.html">
-                                                            Buy Used Furniture and
-                                                            Used Decor
-                                                        </a>
-                                                    </h3>
-                                                    <p class="post-meta">
-                                                        <span class="date">Oct 7, 2019</span>
-                                                        <span class="separator">|</span> by <a href="#">HasTech</a>
-                                                    </p>
-                                                    <p class="short-desc">
-                                                        It's no secret, engines and transmissions
-                                                        can be very expensive Lorem ipsum dolor sit amet consectetur
-                                                        adipisicing elit. Error, numquam....
-                                                    </p>
-                                                    <a href="blog-post-left-sidebar.html"
-                                                       class="blog-post-link">Read More</a>
-                                                </div>
-                                            </div>
-                                            <!--=======  End of single blog post  =======-->
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <!--=======  single blog post  =======-->
-                                            <div class="single-blog-post">
-                                                <div class="single-blog-post__image">
-                                                    <a href="blog-post-left-sidebar.html">
-                                                        <img src="assets/img/blog/slider/3-370x235.jpg"
-                                                             class="img-fluid" alt="">
-                                                    </a>
-
-                                                </div>
-                                                <div class="single-blog-post__content">
-                                                    <h3 class="title">
-                                                        <a href="blog-post-left-sidebar.html">
-                                                            Minor Wreck? We Got
-                                                            The Furniture!
-                                                        </a>
-                                                    </h3>
-                                                    <p class="post-meta">
-                                                        <span class="date">Oct 8, 2019</span>
-                                                        <span class="separator">|</span> by <a href="#">HasTech</a>
-                                                    </p>
-                                                    <p class="short-desc">
-                                                        It's no secret, engines and transmissions
-                                                        can be very expensive Lorem ipsum dolor sit amet consectetur
-                                                        adipisicing elit. Iusto, repudiandae....
-                                                    </p>
-                                                    <a href="blog-post-left-sidebar.html"
-                                                       class="blog-post-link">Read More</a>
-                                                </div>
-                                            </div>
-                                            <!--=======  End of single blog post  =======-->
-                                        </div>
                                     </div>
                                 </div>
 
@@ -164,116 +98,52 @@
                                 <div class="page-sidebar-wrapper">
                                     <div class="single-sidebar-widget">
 
-                                        <h4 class="single-sidebar-widget__title">Categories</h4>
+                                        <h4 class="single-sidebar-widget__title">گروه مقالات</h4>
                                         <ul class="single-sidebar-widget__category-list">
-                                            <li class="has-children">
-                                                <a href="#" class="active">
-                                                    Accessories <span class="counter">15</span>
-                                                </a>
-                                                <ul>
-                                                    <li>
-                                                        <a href="#">Brushes <span class="counter">3</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Mascara <span class="counter">5</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Eye Shadow <span class="counter">1</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Eye Brushes <span class="counter">7</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Car Seats <span class="counter">7</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Chair <span class="counter">11</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Engine Parts <span class="counter">17</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Sofas <span class="counter">13</span></a>
-                                            </li>
+                                            @foreach (var category in Model.ArticleCategories)
+                                            {
+                                                <li class="has-children">
+                                                    <a asp-page="./ArticleCategory" asp-route-id="@category.Slug" class="active">
+                                                        @category.Name <span class="counter">@category.ArticlesCount</span>
+                                                    </a>
+
+                                                </li>
+                                            }
+
+
 
                                         </ul>
                                     </div>
                                     <div class="single-sidebar-widget">
 
-                                        <h4 class="single-sidebar-widget__title">Recent Posts</h4>
+                                        <h4 class="single-sidebar-widget__title">آخرین مقالات</h4>
                                         <div class="block-container">
-                                            <div class="single-block d-flex">
-                                                <div class="image">
-                                                    <a href="blog-post-image-format.html">
-                                                        <img src="assets/img/blog/slider/1-370x235.jpg"
-                                                             class="img-fluid" alt="">
-                                                    </a>
+                                            @foreach (var lastArticle in Model.LatestArticles)
+                                            {
+                                                <div class="single-block d-flex">
+                                                    <div class="image">
+                                                        <a asp-page="./Article" asp-route-id="@lastArticle.Slug">
+                                                            <img src="~/ProductPictures/@lastArticle.Picture"
+                                                                 class="img-fluid" alt="@lastArticle.PictureAlt" title="@lastArticle.PictureTitle">
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <p>
+                                                            <a asp-page="./Article" asp-route-id="@lastArticle.Slug">
+                                                                @lastArticle.Title
+                                                            </a> <span>@lastArticle.PublishDate</span>
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div class="content">
-                                                    <p>
-                                                        <a href="blog-post-image-format.html">
-                                                            The biggest lie in
-                                                            furniture
-                                                        </a> <span>APRIL 24, 2019</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="single-block d-flex">
-                                                <div class="image">
-                                                    <a href="blog-post-image-gallery.html">
-                                                        <img src="assets/img/blog/slider/2-370x235.jpg"
-                                                             class="img-fluid" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <p>
-                                                        <a href="blog-post-image-gallery.html">
-                                                            How to improve
-                                                            furniture quality
-                                                        </a> <span>APRIL 24, 2019</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="single-block d-flex">
-                                                <div class="image">
-                                                    <a href="blog-post-audio-format.html">
-                                                        <img src="assets/img/blog/slider/3-370x235.jpg"
-                                                             class="img-fluid" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <p>
-                                                        <a href="blog-post-audio-format.html">
-                                                            101 ideas for
-                                                            furniture
-                                                        </a> <span>APRIL 24, 2019</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="single-block d-flex">
-                                                <div class="image">
-                                                    <a href="blog-post-video-format.html">
-                                                        <img src="assets/img/blog/slider/4-370x235.jpg"
-                                                             class="img-fluid" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <p>
-                                                        <a href="blog-post-video-format.html">
-                                                            No more mistakes with
-                                                            furniture
-                                                        </a> <span>APRIL 24, 2019</span>
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            }
+
+
                                         </div>
                                     </div>
 
                                     <div class="single-sidebar-widget">
 
-                                        <h4 class="single-sidebar-widget__title">Recent Comments</h4>
+                                        <h4 class="single-sidebar-widget__title">نظرات اخیر</h4>
                                         <div class="block-container">
                                             <div class="single-block comment-block d-flex">
                                                 <div class="image">
@@ -361,32 +231,16 @@
                                     <!--=======  End of single sidebar widget  =======-->
                                     <!--=======  single sidebar widget  =======-->
                                     <div class="single-sidebar-widget">
-                                        <h4 class="single-sidebar-widget__title">Popular Tags</h4>
+                                        <h4 class="single-sidebar-widget__title">تگ ها</h4>
                                         <ul class="single-sidebar-widget__tag-list">
-                                            <li>
-                                                <a href="#">Car Seats</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Chair</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Engine Parts</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Sofas</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Sofas</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Decor</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Furniture</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Chair</a>
-                                            </li>
+                                            @foreach (var tag in Model.ArticleCategory.KeywordsList)
+                                            {
+                                                <li>
+                                                    <a asp-page="./Search" asp-route-value="@tag">@tag</a>
+                                                </li>
+                                            }
+
+
 
                                         </ul>
                                     </div>

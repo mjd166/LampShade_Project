@@ -21,33 +21,45 @@ namespace _01_LampshadeQuery.Query
 
         public ArticleCategoryQueryModel GetArticleCategories(string slug)
         {
-            return _blogContext.ArticleCategories.Select(x => new ArticleCategoryQueryModel
-            {
-                 Name=x.Name,
-                 Description=x.Description,
-                 Picture=x.Picture,
-                 PictureAlt=x.PictureAlt,
-                 PictureTitle=x.PictureTitle,
-                 Slug=x.Slug,
-                 Keywords=x.Keywords,
-                 MetaDescription=x.MetaDescription,
-                 CanonicalAddress =x.CanonicalAddress,
-                 Articles=MapArticles(x.Articles)
+            var articlecategory = _blogContext.ArticleCategories
+                .Include(x => x.Articles)
+                .Select(x => new ArticleCategoryQueryModel
+                {
+                    Name = x.Name,
+                    Description = x.Description,
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+                    Slug = x.Slug,
+                    Keywords = x.Keywords,
+                    MetaDescription = x.MetaDescription,
+                    CanonicalAddress = x.CanonicalAddress,
+                    Articles = MapArticles(x.Articles),
+                    ArticlesCount = x.Articles.Count,
 
-            }).FirstOrDefault(x=>x.Slug==slug);
+
+                }).FirstOrDefault(x => x.Slug == slug);
+
+            if (!string.IsNullOrWhiteSpace(articlecategory.Keywords))
+                articlecategory.KeywordsList = articlecategory.Keywords.Split('،').ToList();
+            return articlecategory;
+
+
+
+
         }
 
         private static List<ArticleQueryModel> MapArticles(List<Article> articles)
         {
             return articles.Select(x => new ArticleQueryModel
             {
-                Slug=x.Slug,
-                ShortDescription=x.ShortDescription,
-                Title =x.Title,
-                Picture=x.Picture,
-                PictureAlt=x.PictureAlt,
-                PictureTitle=x.PictureTitle,
-                 PublishDate =x.PublishDate.ToFarsi()
+                Slug = x.Slug,
+                ShortDescription = x.ShortDescription,
+                Title = x.Title,
+                Picture = x.Picture,
+                PictureAlt = x.PictureAlt,
+                PictureTitle = x.PictureTitle,
+                PublishDate = x.PublishDate.ToFarsi()
             }).ToList();
         }
 
@@ -63,7 +75,7 @@ namespace _01_LampshadeQuery.Query
                     Picture = x.Picture,
                     PictureAlt = x.PictureAlt,
                     PictureTitle = x.PictureTitle,
-                   
+
                     ArticlesCount = x.Articles.Count
                 }).AsNoTracking().ToList();
         }

@@ -23,12 +23,14 @@
                                 <li class="menu-item-has-children">
                                     <a href="blog-left-sidebar.html">محصولات</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="blog-left-sidebar.html">دکوری</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-right-sidebar.html">نگه دارنده</a>
-                                        </li>
+                                        @foreach (var productcategory in Model.ProductCategories)
+                                        {
+                                            <li>
+                                                <a asp-page="/ProductCategory" asp-route-id="@productcategory.Slug">@productcategory.Name</a>
+                                            </li>
+                                        }
+
+                                       
 
                                     </ul>
                                 </li>
@@ -36,12 +38,14 @@
                                 <li class="menu-item-has-children">
                                     <a href="blog-left-sidebar.html">مقالات</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="blog-left-sidebar.html">گروه 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-right-sidebar.html">گروه 2</a>
-                                        </li>
+                                        @foreach (var article in Model.ArticleCategories)
+                                        {
+                                            <li>
+                                                <a asp-page="/ArticleCategory" asp-route-id="@article.Slug">@article.Name</a>
+                                            </li>
+                                        }
+
+                                        
 
                                     </ul>
                                 </li>
@@ -263,7 +267,7 @@
                             @foreach (var item in Model.ArticleCategories)
                             {
                                 <li>
-                                    <a asp-page="/ArticleCategory">@item.Name</a>
+                                    <a asp-page="/ArticleCategory" asp-route-id="@item.Slug">@item.Name</a>
                                 </li>
                             }
 

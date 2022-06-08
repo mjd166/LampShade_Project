@@ -22,5 +22,6 @@ namespace _01_LampshadeQuery.Contracts.ArticleCategory
         public long ArticlesCount { get; set; }
 
         public List<ArticleQueryModel> Articles { get; set; }
+        public List<string> KeywordsList { get; set; }
     }
 }
