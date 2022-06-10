@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Application;
 using _01_LampshadeQuery.Contracts.Product;
+using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
@@ -17,18 +18,20 @@ namespace _01_LampshadeQuery.Query
         private readonly ShopContext _context;
         private readonly InventoryContext _inventoryContext;
         private readonly DiscountContext _discountContext;
+        private readonly CommentContext _commentContext;
 
-        public ProductQuery(ShopContext context, InventoryContext inventoryContext, DiscountContext discountContext)
+        public ProductQuery(ShopContext context, InventoryContext inventoryContext, DiscountContext discountContext, CommentContext commentContext)
         {
             _context = context;
             _inventoryContext = inventoryContext;
             _discountContext = discountContext;
+            _commentContext = commentContext;
         }
 
         public ProductQueryModel GetDetails(string slug)
         {
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice, x.InStock }).ToList();
-
+     
             var discounts = _discountContext.CustomerDiscounts
                 .Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now)
                 .Select(x => new { x.DiscountRate, x.ProductId, x.EndDate }).ToList();
@@ -79,23 +82,23 @@ namespace _01_LampshadeQuery.Query
                     product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
                 }
             }
+            product.Comments = _commentContext.Comments
+                .Where(x => x.Type == CommentType.Product)
+                .Where(x=>x.OwnerRecordId==product.Id)
+                .Where(x => !x.IsCanceled && x.IsConfirmed)
+                .Select(x=>new CommentQueryModel
+                {
+                     Id=x.Id,
+                     Message=x.Message,
+                     Name=x.Name
+                }).OrderByDescending(x=>x.Id).AsNoTracking()
+                .ToList();
 
-
+           
             return product;
         }
 
-        //private static List<CommentQueryModel> MapComments(List<Comment> comments)
-        //{
-        //    return comments
-        //        .Where(x=>!x.IsCanceled && x.IsConfirmed)
-        //        .Select(x => new CommentQueryModel
-        //    {
-        //        Id = x.Id,
-        //        Message = x.Message,
-        //        Name = x.Name,
-                
-        //    }).OrderByDescending(x=>x.Id).ToList();
-        //}
+   
 
         private static List<ProductPictureQueryModel> MapPRodcutPictures(List<ProductPicture> productPictures)
         {

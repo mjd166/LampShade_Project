@@ -249,3 +249,4 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Appliation.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs

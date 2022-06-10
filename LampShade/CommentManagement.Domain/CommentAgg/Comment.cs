@@ -19,7 +19,7 @@ namespace CommentManagement.Domain.CommentAgg
 
         public long ParentId { get; private set; }
         public Comment Parent { get; private set; }
-        public List<Comment> Children { get; private set; }
+       // public List<Comment> Children { get; private set; }
         //Navigation property.
 
 
