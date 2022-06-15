@@ -42,7 +42,7 @@ namespace CommentManagement.Domain.CommentAgg
 
         public void Cancel()
         {
-            IsConfirmed = true;
+            IsConfirmed = false;
         }
     }
 }

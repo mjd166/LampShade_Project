@@ -29,5 +29,7 @@ namespace _0_Framework.Application
             Message = message;
             return this;
         }
+
+        
     }
 }

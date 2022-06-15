@@ -5,5 +5,6 @@
         public const string DoublicatedRecord = "امکان ثبت رکورد تکراری وجود ندارد لطفا مجدد تلاش بفرمایید";
         public const string RecordNotFound = "رکورد با اطلاعات درخواست شده یافت نشد لطفا مجدد تلاش بفرمایید";
 
+        public const string PasswordNotMatch ="پسورد و تکرار آن باهم مطابقت نداند.";
     }
 }

@@ -463,10 +463,12 @@ select {
 
 .header-area.is-sticky .mini-cart {
 	margin-top: 12px;
+	
 }
 
 .header-area.is-sticky .settings-menu-wrapper {
 	margin-top: 12px;
+	
 }
 
 .header-wrapper {
@@ -792,6 +794,7 @@ select {
 
 .mini-cart.active {
 	display: block;
+	position:relative;
 }
 
 .mini-cart .cart-items-wrapper {
@@ -1009,6 +1012,7 @@ select {
 
 .settings-menu-wrapper.active {
 	display: block;
+	position:relative;
 }
 
 .settings-menu-wrapper .single-settings-block {
