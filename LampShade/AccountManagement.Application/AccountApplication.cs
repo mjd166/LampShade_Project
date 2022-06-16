@@ -26,7 +26,7 @@ namespace AccountManagement.Application
             var account = _accountRepository.Get(command.Id);
             if (account == null) return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if (command.Password != command.Password)
+            if (command.Password != command.RePassword)
                 return operation.Failed(ApplicationMessages.PasswordNotMatch);
 
             var password = _passwordHasher.Hash(command.Password);
@@ -60,15 +60,12 @@ namespace AccountManagement.Application
             if (_accountRepository.Exist(x => x.Mobile == command.Mobile  && account.Id != command.Id || 
                                         (x.Username == command.Username && account.Id!=command.Id)))
                                          
-                return operation.Failed(ApplicationMessages.DoublicatedRecord);
-           
+                return operation.Failed(ApplicationMessages.DoublicatedRecord); 
             string path = $"Profilephotos";
             string filepath = _fileUploader.Upload(command.ProfilePhoto, path);
             account.Edit(command.Fullname, command.Username, command.Mobile, command.RoleId, filepath);
-            _accountRepository.Savechanges()
-                ;
+            _accountRepository.Savechanges();
             return operation.Succedded();
-
         }
 
         public EditAccount GetDetails(long id)

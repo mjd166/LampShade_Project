@@ -20,62 +20,26 @@ namespace ServiceHost.Areas.Administrator.Pages.Accounts.Account
         public AccountSearchModel SearchModel { get; set; }
         public List<AccountViewModel> Accounts { get; set; }
         private readonly IAccountApplication _AccountApplication;
-
-        public IndexModel(IAccountApplication accountApplication)
+        private readonly IRoleApplication _roleApplication;
+        public IndexModel(IAccountApplication accountApplication, IRoleApplication roleApplication)
         {
             _AccountApplication = accountApplication;
-            
+            _roleApplication = roleApplication;
         }
 
         public void OnGet(AccountSearchModel searchModel)
         {
-            var roles = new List<RoleViewModel>();
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 1,
-                Name = "مدیر سیستم"
-            });
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 2,
-                Name = "مدیر سایت"
-            });
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 3,
-                Name = "اوپراتور"
-            });
-            Roles = new SelectList(roles, "Id", "Name");
+            Roles = new SelectList(_roleApplication.List(), "Id", "Name");
+            
             Accounts = _AccountApplication.Search(searchModel);
         }
 
         public IActionResult OnGetCreate()
         {
-            var roles = new List<RoleViewModel>();
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 1,
-                Name = "مدیر سیستم"
-            });
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 2,
-                Name = "مدیر سایت"
-            });
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 3,
-                Name = "اوپراتور"
-            });
+            
             var command = new CreateAccount
             {
-               Roles=roles
+               Roles=_roleApplication.List()
             };
 
 
@@ -89,27 +53,9 @@ namespace ServiceHost.Areas.Administrator.Pages.Accounts.Account
 
         public IActionResult OnGetEdit(long id)
         {
-            var roles = new List<RoleViewModel>();
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 1,
-                Name = "مدیر سیستم"
-            });
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 2,
-                Name = "مدیر سایت"
-            });
-            roles.Add(new RoleViewModel
-            {
-                CreationDate = DateTime.Now.ToFarsi(),
-                Id = 3,
-                Name = "اوپراتور"
-            });
+          
             var account = _AccountApplication.GetDetails(id);
-            account.Roles = roles;
+            account.Roles = _roleApplication.List();
             return Partial("Edit", account);
         }
 
@@ -118,6 +64,21 @@ namespace ServiceHost.Areas.Administrator.Pages.Accounts.Account
             return new JsonResult(_AccountApplication.Edit(command));
         }
 
+
+        public IActionResult OnGetChangePassword(long id)
+        {
+            var command = new ChangePassword { Id = id };
+
+            return Partial("ChangePassword", command);
+
+        }
+
+
+        public JsonResult OnPostChangePassword(ChangePassword changePassword)
+        {
+            var result = _AccountApplication.ChangePassword(changePassword);
+            return new JsonResult(result);
+        }
 
     
     }
