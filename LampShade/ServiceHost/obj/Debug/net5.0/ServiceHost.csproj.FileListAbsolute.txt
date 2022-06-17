@@ -267,3 +267,4 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Accounts\Role\Create.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Accounts\Role\Edit.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Accounts\Role\Index.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Account.cshtml.g.cs
