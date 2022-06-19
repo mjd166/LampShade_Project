@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using AccountManagement.Infrastructure.Configuration;
 using BlogManagement.Infrastructure.Configuration;
 using CommentManagement.Infrastructure.Configuration;
@@ -8,17 +9,13 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Configuration;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
-using System.Threading.Tasks;
 
 namespace ServiceHost
 {
@@ -34,7 +31,8 @@ namespace ServiceHost
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+
+
             services.AddHttpContextAccessor();
             var connectionstring = Configuration.GetConnectionString("LampshadeDb");
             ShopManagementBootstrapper.Configure(services, connectionstring);
@@ -55,14 +53,51 @@ namespace ServiceHost
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.Lax;
             });
-
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
+             .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
+             {
+                 o.LoginPath = new PathString("/Account");
+                 o.LogoutPath = new PathString("/Account");
+                 o.AccessDeniedPath = new PathString("/AccessDenied");
+             });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminArea", builder =>
+                builder.RequireRole(new List<string> { Roles.Administrator, Roles.ContentUploader }));
+
+                options.AddPolicy("Shop", builder =>
+                builder.RequireRole(new List<string> { Roles.Administrator }));
+
+                options.AddPolicy("Shop", builder =>
+                builder.RequireRole(new List<string> { Roles.Administrator }));
+
+
+                options.AddPolicy("Discount", builder =>
                 {
-                    o.LoginPath = new PathString("/Account");
-                    o.LogoutPath = new PathString("/Account");
-                    o.AccessDeniedPath = new PathString("/AccessDenied");
+                    builder.RequireRole(new List<string>
+                    {
+                        Roles.Administrator
+                    });
                 });
+
+                options.AddPolicy("Account", builder =>
+                {
+                    builder.RequireRole(new List<string> { Roles.Administrator });
+                });
+
+            });
+
+
+            services.AddRazorPages()
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions.AuthorizeAreaFolder("Administrator", "/", "AdminArea");
+                    options.Conventions.AuthorizeAreaFolder("Administrator", "/Shop", "Shop");
+                    options.Conventions.AuthorizeAreaFolder("Administrator","/Discounts", "Discount");
+                    options.Conventions.AuthorizeAreaFolder("Administrator", "/Accounts", "Account");
+                });
+
 
 
         }
@@ -93,7 +128,7 @@ namespace ServiceHost
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-               // endpoints.MapDefaultControllerRoute();
+                // endpoints.MapDefaultControllerRoute();
 
             });
         }

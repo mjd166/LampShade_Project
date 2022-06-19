@@ -6,6 +6,7 @@
         public long RoleId { get; set; }
         public string Fullname { get; set; }
         public string Username { get; set; }
+        public string Role { get; set; }
 
         public AuthViewModel(long accountId, long roleId, string fullname, string username)
         {
@@ -13,6 +14,10 @@
             RoleId = roleId;
             Fullname = fullname;
             Username = username;
+        }
+
+        public AuthViewModel()
+        {
         }
     }
 }

@@ -30,10 +30,10 @@
                     <div class="page-content-wrapper">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6">
-                                @if (Model.Message != null)
+                                @if (Model.LoginMessage != null)
                                 {
                                     <div class="alert alert-danger">
-                                        @Model.Message
+                                        @Model.LoginMessage
                                     </div>
                                 }
 
@@ -52,12 +52,12 @@
                                             </div>
                                             @*<div class="col-sm-6">
 
-                        <div class="check-box d-inline-block ml-0 ml-md-2">
-                            <input type="checkbox" id="remember_me">
-                            <label for="remember_me">Remember me</label>
-                        </div>
+                                                    <div class="check-box d-inline-block ml-0 ml-md-2">
+                                                        <input type="checkbox" id="remember_me">
+                                                        <label for="remember_me">Remember me</label>
+                                                    </div>
 
-                    </div>*@
+                                                </div>*@
 
                                             <div class="col-sm-6 text-left text-sm-right">
                                                 <a href="#" class="forget-pass-link"> رمز را فراموش کردید?</a>
@@ -73,7 +73,13 @@
                                 </form>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                                <form action="#">
+                                @if (Model.RegisterMessage != null)
+                                {
+                                    <div class="alert alert-danger">
+                                        @Model.RegisterMessage
+                                    </div>
+                                }
+                                <form asp-page-handler="Register" method="post">
 
                                     <div class="login-form">
                                         <h4 class="login-title">ثبت نام</h4>
@@ -81,11 +87,11 @@
                                         <div class="row">
                                             <div class="col-md-6 col-12 mb-20">
                                                 <label>نام کامل</label>
-                                                <input type="text"name="fullname" placeholder="نام کامل">
+                                                <input type="text" name="fullname" placeholder="نام کامل">
                                             </div>
                                             <div class="col-md-6 col-12 mb-20">
                                                 <label>نام کاربری</label>
-                                                <input type="text"  name="username" placeholder="نام کاربری">
+                                                <input type="text" name="username" placeholder="نام کاربری">
                                             </div>
                                             <div class="col-md-12 mb-20">
                                                 <label>موبایل*</label>

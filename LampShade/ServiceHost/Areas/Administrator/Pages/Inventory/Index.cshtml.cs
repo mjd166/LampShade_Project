@@ -1,13 +1,15 @@
 using System.Collections.Generic;
+using _0_Framework.Infrastructure;
 using InventoryManagement.Application.Contracts.Inventory;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ShopManagement.Application.Contracts.Product;
 
 namespace ServiceHost.Areas.Administrator.Pages.Inventory
-
 {
+    [Authorize(Roles = Roles.Administrator)]
     public class IndexModel : PageModel
     {
         [TempData]
@@ -18,7 +20,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
         public InventorySearchModel SearchModel { get; set; }
         public List<InventoryViewModel> Inventory { get; set; }
         private readonly IInventoryApplication _inventoryApplication;
-        private readonly  IProductApplication _productApplication;
+        private readonly IProductApplication _productApplication;
 
         public IndexModel(IInventoryApplication inventoryApplication, IProductApplication productApplication)
         {
@@ -29,7 +31,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
         public void OnGet(InventorySearchModel searchModel)
         {
             Message = "";
-            Products =new SelectList( _productApplication.GetProducts(),"Id","Name");
+            Products = new SelectList(_productApplication.GetProducts(), "Id", "Name");
             Inventory = _inventoryApplication.Search(searchModel);
         }
 
@@ -39,7 +41,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
             {
 
                 Products = _productApplication.GetProducts()
-                
+
             };
 
 
@@ -56,7 +58,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
             var inventory = _inventoryApplication.GetDetails(id);
             inventory.Products = _productApplication.GetProducts();
             return Partial("Edit", inventory);
-           
+
         }
 
         public JsonResult OnPostEdit(EditInventory command)
@@ -73,7 +75,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
             var inventory = new IncreaseInventory()
             {
                 InventoryId = id
-                 
+
             };
             return Partial("Increase", inventory);
 
