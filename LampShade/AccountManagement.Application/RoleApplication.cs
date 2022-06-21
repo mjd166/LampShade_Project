@@ -19,7 +19,7 @@ namespace AccountManagement.Application
         {
             var operation = new OperationResult();
             if (_roleRepository.Exist(x => x.Name == command.Name)) return operation.Failed(ApplicationMessages.DoublicatedRecord);
-            var role = new Role(command.Name);
+            var role = new Role(command.Name,new List<Permission> { });
             _roleRepository.Create(role);
             _roleRepository.Savechanges();
             return operation.Succedded();
@@ -32,7 +32,7 @@ namespace AccountManagement.Application
             if (role == null) return operation.Failed(ApplicationMessages.RecordNotFound);
             if (_roleRepository.Exist(x => x.Name == command.Name && x.Id != command.Id)) return operation.Failed(ApplicationMessages.DoublicatedRecord);
 
-            role.Edit(command.Name);
+            role.Edit(command.Name, new List<Permission> { });
             _roleRepository.Savechanges();
             return operation.Succedded();
         }

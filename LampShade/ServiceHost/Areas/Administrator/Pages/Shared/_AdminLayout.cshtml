@@ -41,6 +41,7 @@
 
     <link href="~/AdminTheme/assets/css/persian-datepicker.min.css" rel="stylesheet" />
 
+    @RenderSection("Css", false);
 
     <link href="~/AdminTheme/assets/css/helper.css" rel="stylesheet" type="text/css" />
     <link href="~/AdminTheme/assets/css/style.css" rel="stylesheet" type="text/css" />
@@ -357,6 +358,8 @@
             initialValueType: 'persian'
         });
     </script>
+
+
     @RenderSection("Scripts", false)
     //s0z286blagdj711pbf82ycu73hbrtl3lk70lwe1jkbt14cv3
     <script src="https://cdn.tiny.cloud/1/s0z286blagdj711pbf82ycu73hbrtl3lk70lwe1jkbt14cv3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
@@ -371,4 +374,5 @@
         });
     </script>
 </body>
+
 </html>
