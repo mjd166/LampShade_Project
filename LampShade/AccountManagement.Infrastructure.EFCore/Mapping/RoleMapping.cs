@@ -23,6 +23,7 @@ namespace AccountManagement.Infrastructure.EFCore.Mapping
             {
                 navigationbuiler.HasKey(x => x.Id);
                 navigationbuiler.ToTable("RolePermissions");
+                navigationbuiler.Ignore(x => x.Name);
                 navigationbuiler.WithOwner(x => x.Role);
             });
         }

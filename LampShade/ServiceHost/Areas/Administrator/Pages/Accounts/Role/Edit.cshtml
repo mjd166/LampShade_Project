@@ -28,7 +28,7 @@
                             <div class="col-md-6">
                                 <label class="control-label col-md-3">انتخاب دسترسی ها</label>
                                 <div class="col-md-12">
-                                    <select asp-for="Command.Permissions" asp-items="Model.Permissions" class="multi-select" multiple="multiple" id="my_multi_select3">
+                                    <select asp-for="Command.Permissions" asp-items="@Model.Permissions" class="multi-select" multiple="multiple" id="my_multi_select3">
                                     </select>
                                 </div>
                                 <input type="hidden" asp-for="Command.Id" value="@Model.Command.Id" />
