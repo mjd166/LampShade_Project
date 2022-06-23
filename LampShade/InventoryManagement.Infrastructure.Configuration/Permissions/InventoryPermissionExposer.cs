@@ -13,10 +13,13 @@ namespace InventoryManagement.Infrastructure.Configuration.Permissions
                 {
                     "Inventory",new List<PermissionDto>
                     {
-                        new PermissionDto(50,"ListInventory"),
-                        new PermissionDto(51,"SearchInventory"),
-                        new PermissionDto(52,"CreateInventory"),
-                        new PermissionDto(53,"EditInventory")
+                        new PermissionDto(InventoryPermissions.ListInventory,"ListInventory"),
+                        new PermissionDto(InventoryPermissions.SearchInventory,"SearchInventory"),
+                        new PermissionDto(InventoryPermissions.CreateInventory,"CreateInventory"),
+                        new PermissionDto(InventoryPermissions.EditInventory,"EditInventory"),
+                        new PermissionDto(InventoryPermissions.IncreaseInventory,"IncreaseInventory"),
+                        new PermissionDto(InventoryPermissions.ReduceInventory,"RedcueInventory"),
+                        new PermissionDto(InventoryPermissions.OperationLog,"OperationLog"),
                     }
                 }
             };

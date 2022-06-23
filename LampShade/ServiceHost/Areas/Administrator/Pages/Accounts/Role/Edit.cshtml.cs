@@ -43,7 +43,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Accounts.Role
                         {
                             Group = groups
                         };
-                        if (Command.Permissions.Any(x => x.Code == permiss.Code))
+                        if (Command.MappedPermissions.Any(x => x.Code == permiss.Code))
                         {
                             item.Selected = true;
                         }

@@ -67,28 +67,29 @@ namespace _0_Framework.Application
 
         public bool IsAuthenticated()
         {
-            //return _contextAccessor.HttpContext.User.Identity.IsAuthenticated;
+            return _contextAccessor.HttpContext.User.Identity.IsAuthenticated;
             //var claims = _contextAccessor.HttpContext.User.Claims.ToList();
             ////if (claims.Count > 0)
             ////    return true;
             ////return false;
             //return claims.Count > 0;
 
-            var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+            //var claims = _contextAccessor.HttpContext.User.Claims.ToList();
 
-            return claims.Count > 0;
+            //return claims.Count > 0;
         }
 
         public void SignIn(AuthViewModel account)
         {
-            //var permissions = JsonConvert.SerializeObject(account.Permissions);
+            var permissions = JsonConvert.SerializeObject(account.Permissions);
+
             var claims = new List<Claim>
             {
                 new Claim("AccountId", account.AccountId.ToString()),
                 new Claim(ClaimTypes.Name, account.Fullname),
                 new Claim(ClaimTypes.Role, account.RoleId.ToString()),
                 new Claim("Username", account.Username), // Or Use ClaimTypes.NameIdentifier
-                //new Claim("permissions", permissions),
+                new Claim("permissions", permissions),
                 //new Claim("FullName", account.Fullname)
             };
 
