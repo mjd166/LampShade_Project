@@ -27,7 +27,7 @@ using InventoryManagement.Application.Contracts.Inventory;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dd71eda3617baaf60bb38684fdaa3341e4c810c1", @"/Areas/Administrator/Pages/Inventory/Increase.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d027006424b9e12b1709732f146fce9f1d78e6a1", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fa1976a8cacc1dce2a2912aacc4f76dab14821c", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Administrator_Pages_Inventory_Increase : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IncreaseInventory>
     #nullable disable

@@ -27,7 +27,7 @@ using ShopManagement.Application.Contracts.Product;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"37e9a870c3f74e3c088a79289b8490e7c111546b", @"/Areas/Administrator/Pages/Shop/Products/Edit.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d027006424b9e12b1709732f146fce9f1d78e6a1", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fa1976a8cacc1dce2a2912aacc4f76dab14821c", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Administrator_Pages_Shop_Products_Edit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<EditProduct>
     #nullable disable

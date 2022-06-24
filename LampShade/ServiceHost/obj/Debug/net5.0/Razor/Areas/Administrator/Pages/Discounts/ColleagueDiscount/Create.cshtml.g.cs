@@ -27,7 +27,7 @@ using DiscountManagement.Application.Contracts.ColleagueDiscount;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"440de2dd9a61554bbb2c9f82e1db61b09d3c7783", @"/Areas/Administrator/Pages/Discounts/ColleagueDiscount/Create.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d027006424b9e12b1709732f146fce9f1d78e6a1", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fa1976a8cacc1dce2a2912aacc4f76dab14821c", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Administrator_Pages_Discounts_ColleagueDiscount_Create : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<DefineColleagueDiscount>
     #nullable disable

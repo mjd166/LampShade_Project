@@ -27,7 +27,7 @@ using DiscountManagement.Application.Contracts.CustomerDiscount;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"17b9bef293b5a15b7a82923e4952e3f4f0f41862", @"/Areas/Administrator/Pages/Discounts/CustomerDiscount/Create.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d027006424b9e12b1709732f146fce9f1d78e6a1", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fa1976a8cacc1dce2a2912aacc4f76dab14821c", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Administrator_Pages_Discounts_CustomerDiscount_Create : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<DefineCustomerDiscount>
     #nullable disable

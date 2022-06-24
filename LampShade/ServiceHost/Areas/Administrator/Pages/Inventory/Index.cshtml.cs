@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using _0_Framework.Infrastructure;
 using InventoryManagement.Application.Contracts.Inventory;
+using InventoryManagement.Infrastructure.Configuration.Permissions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -28,6 +29,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
             _productApplication = productApplication;
         }
 
+        [NeedPermission(InventoryPermissions.ListInventory)]
         public void OnGet(InventorySearchModel searchModel)
         {
             Message = "";
@@ -48,6 +50,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
             return Partial("Create", command);
         }
 
+        [NeedPermission(InventoryPermissions.CreateInventory)]
         public JsonResult OnPostCreate(CreateInventory command)
         {
             return new JsonResult(_inventoryApplication.Create(command));
@@ -61,6 +64,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
 
         }
 
+        [NeedPermission(InventoryPermissions.EditInventory)]
         public JsonResult OnPostEdit(EditInventory command)
         {
             return new JsonResult(_inventoryApplication.Edit(command));
@@ -81,6 +85,7 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
 
         }
 
+        [NeedPermission(InventoryPermissions.IncreaseInventory)]
         public JsonResult OnPostIncrease(IncreaseInventory command)
         {
             return new JsonResult(_inventoryApplication.Increase(command));
@@ -98,12 +103,13 @@ namespace ServiceHost.Areas.Administrator.Pages.Inventory
             return Partial("Reduce", inventory);
 
         }
-
+        [NeedPermission(InventoryPermissions.ReduceInventory)]
         public JsonResult OnPostReduce(ReduceInventory command)
         {
             return new JsonResult(_inventoryApplication.Reduce(command));
         }
 
+        [NeedPermission(InventoryPermissions.OperationLog)]
         public IActionResult OnGetLog(long id)
         {
             var log = _inventoryApplication.GetOperationLog(id);
