@@ -1,6 +1,6 @@
 ﻿
 @page
-@using InventoryManagement.Infrastructure.Configuration;
+@using InventoryManagement.Infrastructure.Configuration.Permissions;
 @model ServiceHost.Areas.Administrator.Pages.Inventory.IndexModel
 @{
 }
@@ -25,11 +25,11 @@
     <div class="col-sm-12">
         <h4 class="page-title pull-right">@ViewData["title"]</h4>
         <p class="pull-left">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید</a>
+            <a Permission="InventoryPermissions.CreateInventory" class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید</a>
         </p>
     </div>
 </div>
-<div class="row">
+<div Permission="InventoryPermissions.SearchInventory" class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -61,7 +61,7 @@
     </div>
 </div>
 
-<div class="row" id="ProductCategoriesDiv">
+<div class="row" id="ProductCategoriesDiv" Permission="InventoryPermissions.ListInventory">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -99,15 +99,15 @@
                                                href="#showmodal=@Url.Page("./Index","Edit",new {id=item.Id })">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
-                                            <a class="btn btn-success pull-right m-rl-5"
+                                            <a Permission="@InventoryPermissions.IncreaseInventory" class="btn btn-success pull-right m-rl-5"
                                                href="#showmodal=@Url.Page("./Index","Increase",new {id=item.Id })">
                                                 <i class="fa fa-plus"></i> افزایش موجودی
                                             </a>
-                                            <a class="btn btn-danger pull-right m-rl-5"
+                                            <a Permission="@InventoryPermissions.ReduceInventory" class="btn btn-danger pull-right m-rl-5"
                                                href="#showmodal=@Url.Page("./Index","Reduce",new {id=item.Id })">
                                                 <i class="fa fa-minus"></i> کاهش موجودی
                                             </a>
-                                            <a class="btn btn-primary pull-right m-rl-5"
+                                            <a  Permission="@InventoryPermissions.OperationLog"class="btn btn-primary pull-right m-rl-5"
                                                href="#showmodal=@Url.Page("./Index","Log",new {id=item.Id })"
                                                onclick="$('.modal-dialog').css('width','60%')">
 
