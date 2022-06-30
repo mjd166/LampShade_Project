@@ -68,10 +68,10 @@ function UpdateCart() {
                             </div>`;
 
                 cartItemWrapper.append(product);
-                
+
             });
         }
-      
+
     }
 }
 
@@ -82,14 +82,34 @@ function removeFromCard(id) {
     products = JSON.parse(products);
     if (products !== undefined) {
         debugger;
-        
+
         let itemToRemove = products.findIndex(x => x.id === id);
-        
+
         if (itemToRemove !== undefined) {
             products.splice(itemToRemove, 1);
-            $.cookie(cookieName, JSON.stringify(products), { expires: 2,path: "/"});
+            $.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
             UpdateCart();
         }
     }
 }
 
+
+function changeCartItemCount(id, totalId, count) {
+    const cookieName = "cart_items";
+
+    let products = $.cookie(cookieName);
+    products = JSON.parse(products);
+
+    const productIndex = products.findIndex(x => x.id === id);
+    if (productIndex !== undefined) {
+        products[productIndex].count = count;
+        const product = products[productIndex];
+        const NewPrice = parseInt(product.unitPrice) * parseInt(count);
+        $("#${totalId}").text(NewPrice);
+        //products[productIndex].totalPrice = NewPrice;
+        $.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
+        UpdateCart();
+    }
+   
+
+}
