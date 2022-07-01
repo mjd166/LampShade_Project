@@ -5,6 +5,7 @@
         public const string Administrator = "1";
         public const string ContentUploader = "2";
         public const string SystemUser = "3";
+        public const string ColleagueUser = "4";
 
 
         public static string GetRoleBy(long roleId)
@@ -18,6 +19,8 @@
                     return "محتوا گزار";
                 case 3:
                     return "کاربر سیستم";
+                case 4:
+                    return "همکار";
 
                 default:
                     return "";

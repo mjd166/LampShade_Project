@@ -105,7 +105,7 @@ function changeCartItemCount(id, totalId, count) {
         products[productIndex].count = count;
         const product = products[productIndex];
         const NewPrice = parseInt(product.unitPrice) * parseInt(count);
-        $("#${totalId}").text(NewPrice);
+        $("#"+totalId).text(NewPrice);
         //products[productIndex].totalPrice = NewPrice;
         $.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
         UpdateCart();
