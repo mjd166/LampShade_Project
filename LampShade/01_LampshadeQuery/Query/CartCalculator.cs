@@ -25,8 +25,8 @@ namespace _01_LampshadeQuery.Query
             var cart = new Cart();
 
             var colleagueDiscount = _discountContext.ColleagueDiscounts
-                .Where(x=>!x.IsRemoved)
-                .Select(x=>new
+                .Where(x => !x.IsRemoved)
+                .Select(x => new
                 {
                     x.DiscountRate,
                     x.ProductId
@@ -40,23 +40,23 @@ namespace _01_LampshadeQuery.Query
 
                 }).ToList();
             var currentAccountRole = authHelper.CurrentAccountRole();
-           
-            foreach(var item in cartItems)
+
+            foreach (var item in cartItems)
             {
-                
-                if(currentAccountRole == Roles.ColleagueUser)
+
+                if (currentAccountRole == Roles.ColleagueUser)
                 {
                     var colleaguedisc = colleagueDiscount.FirstOrDefault(x => x.ProductId == item.Id);
-                    if (colleaguedisc == null) continue;
-                    item.DiscountRate = colleaguedisc.DiscountRate;
+                    if (colleaguedisc != null)
+                        item.DiscountRate = colleaguedisc.DiscountRate;
                 }
                 else
                 {
                     var customerdisc = customerDiscount.FirstOrDefault(x => x.ProductId == item.Id);
-                    if (customerdisc == null) continue;
-                    item.DiscountRate = customerdisc.DiscountRate;
+                    if (customerdisc != null)
+                        item.DiscountRate = customerdisc.DiscountRate;
                 }
-               
+
                 item.DiscountAmount = ((item.TotalItemPrice * item.DiscountRate) / 100);
                 item.ItemPayAmount = item.TotalItemPrice - item.DiscountAmount;
 
@@ -70,5 +70,5 @@ namespace _01_LampshadeQuery.Query
         }
     }
 
-   
+
 }
