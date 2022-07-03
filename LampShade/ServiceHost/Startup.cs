@@ -1,5 +1,6 @@
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using _01_LampshadeQuery.Query;
 using AccountManagement.Infrastructure.Configuration;
 using BlogManagement.Infrastructure.Configuration;
 using CommentManagement.Infrastructure.Configuration;
@@ -43,10 +44,12 @@ namespace ServiceHost
             CommentManagementBootstrapper.Config(services, connectionstring);
             AccountManagementBootstrapper.Config(services, connectionstring);
             services.AddTransient<IAuthHelper, AuthHelper>();
+       
+
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
-
+           
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
             services.Configure<CookiePolicyOptions>(options =>
             {

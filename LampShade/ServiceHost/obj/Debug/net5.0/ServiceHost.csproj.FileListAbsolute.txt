@@ -19,6 +19,7 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -26,6 +27,8 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Identity.Client.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -41,6 +44,7 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Nancy.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Newtonsoft.Json.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\System.Composition.AttributedModel.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\System.Composition.Convention.dll
@@ -244,6 +248,8 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Account.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Article.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\ArticleCategory.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Cart.cshtml.g.cs
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\CheckOut.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
@@ -269,9 +275,3 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ref\ServiceHost.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
-E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\Nancy.dll
-E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Cart.cshtml.g.cs
-E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\CheckOut.cshtml.g.cs

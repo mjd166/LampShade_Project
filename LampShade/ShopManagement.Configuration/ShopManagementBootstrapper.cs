@@ -44,7 +44,7 @@ namespace ShopManagement.Configuration
             services.AddTransient<IProductQuery, ProductQuery>();
 
             services.AddTransient<IPermissionExposer, ShopPermissionExposer>();
-          
+            services.AddTransient<CartCalculator, CartCalculator>();
 
             services.AddDbContext<ShopContext>(options => options.UseSqlServer(constring));
 

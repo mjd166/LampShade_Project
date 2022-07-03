@@ -8,7 +8,6 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.App
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Domain.pdb
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\bin\Debug\net5.0\_0_Framework.pdb
-E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.csproj.AssemblyReference.cache
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.AssemblyInfoInputs.cache
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.AssemblyInfo.cs
