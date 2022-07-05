@@ -23,5 +23,7 @@ namespace ShopManagement.Application.Contracts.Order
             PayAmount += item.ItemPayAmount;
         }
 
+
+       
     }
 }

@@ -47,8 +47,10 @@ namespace _0_Framework.Application
         public long CurrentAccountId()
         {
             return IsAuthenticated()
-                ? long.Parse(_contextAccessor.HttpContext.User.Claims.First(x => x.Type == "AccountId")?.Value)
-                : 0;
+                   ? long.Parse(_contextAccessor.HttpContext.User.Claims.First(x => x.Type == "AccountId")?.Value)
+                   : 0;
+
+              
         }
 
         public string CurrentAccountMobile()

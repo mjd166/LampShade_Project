@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _0_Framework.Application;
 
 namespace ShopManagement.Application.Contracts.Order
 {
-    interface IOrderApplication
+    public interface IOrderApplication
     {
+        long PlaceOrder(Cart command);
+        void OrderSucceeded(long orderId,long refId);
+
+        
     }
 }
