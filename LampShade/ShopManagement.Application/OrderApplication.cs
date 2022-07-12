@@ -20,7 +20,12 @@ namespace ShopManagement.Application
             _configuration = configuration;
         }
 
-        public void OrderSucceeded(long orderId,long refId)
+        public double GetAmountBy(long id)
+        {
+            return _orderRepository.GetAmountBy(id);
+        }
+
+        public string OrderSucceeded(long orderId,long refId)
         {
             var order = _orderRepository.Get(orderId);
             order.PaymentSucceeded(refId);
@@ -29,7 +34,7 @@ namespace ShopManagement.Application
             order.SetIssueTrackingNumber(issueTrackingNo);
             //Reduce Order Item from Inventory .... 
             _orderRepository.Savechanges();
-
+            return order.IssueTrackingNumber;
         }
 
         public long PlaceOrder(Cart command)

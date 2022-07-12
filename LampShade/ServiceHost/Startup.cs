@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using _0_Framework.Application.ZarinPal;
 using _0_Framework.Infrastructure;
 using _01_LampshadeQuery.Query;
 using AccountManagement.Infrastructure.Configuration;
@@ -36,6 +37,7 @@ namespace ServiceHost
 
             services.AddHttpContextAccessor();
             var connectionstring = Configuration.GetConnectionString("LampshadeDb");
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
             ShopManagementBootstrapper.Configure(services, connectionstring);
             CustomerDiscountManagementBootstrapper.Configure(services, connectionstring);
             InventoryManagementBootstrapper.Configure(services, connectionstring);

@@ -5,8 +5,8 @@ namespace ShopManagement.Application.Contracts.Order
     public interface IOrderApplication
     {
         long PlaceOrder(Cart command);
-        void OrderSucceeded(long orderId,long refId);
+        string OrderSucceeded(long orderId,long refId);
 
-        
+        double GetAmountBy(long id);
     }
 }

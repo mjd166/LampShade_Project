@@ -16,3 +16,4 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.App
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\ref\DiscountManagement.Application.Contracts.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Application.Contracts\obj\Debug\net5.0\DiscountManagement.Application.Contracts.csproj.AssemblyReference.cache
