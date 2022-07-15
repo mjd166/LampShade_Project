@@ -1,5 +1,6 @@
 ﻿@page
 @using _0_Framework.Application;
+@using ShopManagement.Application.Contracts;
 @model ServiceHost.Pages.CheckOutModel
 @{
     ViewData["Title"] = "تایید سبد خرید و پرداخت";
@@ -32,7 +33,7 @@
                 <!--=======  page wrapper  =======-->
                 <div class="page-wrapper">
                     <div class="page-content-wrapper">
-                        <form action="#">
+                        <form method="post">
                             <div class="cart-table table-responsive">
                                 <table class="table">
                                     <thead>
@@ -47,20 +48,20 @@
                                             <th class="pro-remove">مبلغ پس از تخفیف</th>
                                         </tr>
                                     </thead>
-                                    
+
                                     <tbody>
                                         @foreach (var item in Model.Cart.Items)
                                         {
                                             <tr>
                                                 <td class="pro-thumbnail">
-                                                    <a >
+                                                    <a>
                                                         <img src="~/ProductPictures/@item.Picture" class="img-fluid"
                                                              alt="@item.Name">
                                                     </a>
                                                 </td>
                                                 <td class="pro-title">
                                                     <a href="single-product.html">
-                                                       @item.Name
+                                                        @item.Name
                                                     </a>
                                                 </td>
                                                 <td class="pro-price">
@@ -88,18 +89,32 @@
                                 </table>
                             </div>
                         </form>
-
                         <div class="row">
                             <div class="col-lg-6 col-12 d-flex">
-                                <div class="cart-summary">
-                                    <div class="cart-summary-wrap">
-                                        <h4>خلاصه وضعیت فاکتور</h4>
-                                        <p>مبلغ نهایی <span>@Model.Cart.TotalAmount.ToMoney()  تومان</span></p>
-                                        <p>مبلغ تخفیف <span>@Model.Cart.DiscountAmount.ToMoney() تومان</span></p>
-                                        <h2>مبلغ قابل پرداخت <span>@Model.Cart.PayAmount.ToMoney() تومان</span></h2>
-                                    </div>
-                                    <div class="cart-summary-button">
-                                        <a  asp-page-handler="Pay" class="checkout-btn">پرداخت</a>
+                                <div class="checkout-payment-method">
+                                    <h4>نحوه پرداخت</h4>
+                                    @foreach (var method in PaymentMethod.GetList())
+                                    {
+                                        <div class="single-method">
+                                            <input type="radio" id="payment_@method.Id" name="paymentMethod" value="@method.Id" @(PaymentMethod.GetList().First().Id == method.Id ? "checked" : "")>
+                                            <label for="payment_@method.Id">@method.Name</label>
+                                            <p data-method="@method.Id" style="display:@(PaymentMethod.GetList().First().Id == method.Id ? "block" : "none")">@method.Description</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-12 d-flex">
+                                    <div class="cart-summary">
+                                        <div class="cart-summary-wrap">
+                                            <h4>خلاصه وضعیت فاکتور</h4>
+                                            <p>مبلغ نهایی <span>@Model.Cart.TotalAmount.ToMoney()  تومان</span></p>
+                                            <p>مبلغ تخفیف <span>@Model.Cart.DiscountAmount.ToMoney() تومان</span></p>
+                                            <h2>مبلغ قابل پرداخت <span>@Model.Cart.PayAmount.ToMoney() تومان</span></h2>
+                                        </div>
+                                        <div class="cart-summary-button">
+                                            <button asp-page-handler="Pay" class="checkout-btn">پرداخت</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -109,4 +124,3 @@
             </div>
         </div>
     </div>
-</div>

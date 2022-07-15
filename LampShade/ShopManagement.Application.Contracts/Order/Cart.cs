@@ -7,6 +7,7 @@ namespace ShopManagement.Application.Contracts.Order
         public double TotalAmount { get; set; }
         public double DiscountAmount { get; set; }
         public double PayAmount { get; set; }
+        public int PaymentMethod { get; set; }
         public List<CartItem> Items { get; set; }
 
 
@@ -23,6 +24,10 @@ namespace ShopManagement.Application.Contracts.Order
             PayAmount += item.ItemPayAmount;
         }
 
+        public void SetPaymentMethod(int MethodId)
+        {
+            this.PaymentMethod = MethodId;
+        }
 
        
     }

@@ -277,3 +277,4 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\RestSharp.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\bin\Debug\net5.0\RestSharp.Newtonsoft.Json.Extensions.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\ServiceHost\obj\Debug\net5.0\Razor\Pages\PaymentResult.cshtml.g.cs

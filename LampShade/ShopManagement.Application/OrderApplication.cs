@@ -40,7 +40,7 @@ namespace ShopManagement.Application
         public long PlaceOrder(Cart command)
         {
             var currentAccount = _authHelper.CurrentAccountId();
-            var order = new Order(currentAccount, command.TotalAmount, command.DiscountAmount, command.PayAmount);
+            var order = new Order(currentAccount,command.PaymentMethod, command.TotalAmount, command.DiscountAmount, command.PayAmount);
             foreach (var item in command.Items)
             {
                 var orderitem = new OrderItem(item.Id, item.Count, item.UnitPrice, item.DiscountRate);

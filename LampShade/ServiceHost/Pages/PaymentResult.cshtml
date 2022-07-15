@@ -12,16 +12,26 @@
                 {
                     <div class="alert alert-success ">
                         <p>@Model.Result.Message</p>
-                        <p>
-                            شماره پیگیری  <strong> @Model.Result.IssueTrackingNo</strong>
-                        </p>
+                        @if (!string.IsNullOrWhiteSpace(Model.Result.IssueTrackingNo))
+                        {
+                            <p>
+                                شماره پیگیری  <strong> @Model.Result.IssueTrackingNo</strong>
+                            </p>
+                        }
+                        else
+                        {
+                            <p>
+
+                            </p>
+                        }
+
                     </div>
                 }
                 else
                 {
                     <div class="alert alert-danger ">
                         <p>@Model.Result.Message</p>
-                        
+
                     </div>
                 }
             </div>
