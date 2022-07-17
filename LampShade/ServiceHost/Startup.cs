@@ -15,6 +15,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Configuration;
+using ShopManagement.Domain.Services;
+using ShopManagement.Infrastructure.InventoryACL;
 using System.Collections.Generic;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
@@ -47,6 +49,7 @@ namespace ServiceHost
             AccountManagementBootstrapper.Config(services, connectionstring);
             services.AddTransient<IAuthHelper, AuthHelper>();
        
+            services.AddTransient<IShopInventoryACL,ShopInventoryACL>();
 
 
             services.AddTransient<IFileUploader, FileUploader>();

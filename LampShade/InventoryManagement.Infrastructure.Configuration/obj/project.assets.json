@@ -2502,6 +2502,49 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AccountManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Application.Contracts.dll": {}
+        }
+      },
+      "AccountManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AccountManagement.Application.Contracts": "1.0.0",
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Domain.dll": {}
+        }
+      },
+      "AccountManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AccountManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "InventoryManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2548,6 +2591,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.16",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16",
@@ -8292,6 +8336,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "AccountManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Application.Contracts/AccountManagement.Application.Contracts.csproj",
+      "msbuildProject": "../AccountManagement.Application.Contracts/AccountManagement.Application.Contracts.csproj"
+    },
+    "AccountManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Domain/AccountManagement.Domain.csproj",
+      "msbuildProject": "../AccountManagement.Domain/AccountManagement.Domain.csproj"
+    },
+    "AccountManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Infrastructure.EFCore/AccountManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../AccountManagement.Infrastructure.EFCore/AccountManagement.Infrastructure.EFCore.csproj"
     },
     "InventoryManagement.Application/1.0.0": {
       "type": "project",

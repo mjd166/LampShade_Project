@@ -18,6 +18,7 @@
     <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />
     <ProjectReference Include="..\InventoryManagement.Infrastructure.Configuration\InventoryManagement.Infrastructure.Configuration.csproj" />
     <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
+    <ProjectReference Include="..\ShopManagement.Infrastructure.InventoryACL\ShopManagement.Infrastructure.InventoryACL.csproj" />
     <ProjectReference Include="..\_0_Framework\_0_Framework.csproj" />
   </ItemGroup>
 

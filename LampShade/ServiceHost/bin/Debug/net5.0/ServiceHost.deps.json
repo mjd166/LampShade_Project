@@ -43,6 +43,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Nancy": "2.0.0",
           "ShopManagement.Configuration": "1.0.0",
+          "ShopManagement.Infrastructure.InventoryACL": "1.0.0",
           "_0_Framework": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "5.0.0.0",
@@ -2836,6 +2837,18 @@
         },
         "compile": {
           "ShopManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "ShopManagement.Infrastructure.InventoryACL/1.0.0": {
+        "dependencies": {
+          "InventoryManagement.Application.Contracts": "1.0.0",
+          "ShopManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ShopManagement.Infrastructure.InventoryACL.dll": {}
+        },
+        "compile": {
+          "ShopManagement.Infrastructure.InventoryACL.dll": {}
         }
       },
       "_0_Framework/1.0.0": {
@@ -6007,6 +6020,11 @@
       "sha512": ""
     },
     "ShopManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ShopManagement.Infrastructure.InventoryACL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

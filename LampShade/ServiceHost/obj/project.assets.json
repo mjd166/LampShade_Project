@@ -3457,6 +3457,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.16",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16",
@@ -3541,6 +3542,20 @@
         },
         "runtime": {
           "bin/placeholder/ShopManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "ShopManagement.Infrastructure.InventoryACL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "InventoryManagement.Application.Contracts": "1.0.0",
+          "ShopManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopManagement.Infrastructure.InventoryACL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopManagement.Infrastructure.InventoryACL.dll": {}
         }
       },
       "_0_Framework/1.0.0": {
@@ -10383,6 +10398,11 @@
       "path": "../ShopManagement.Infrastructure.EFCore/ShopManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../ShopManagement.Infrastructure.EFCore/ShopManagement.Infrastructure.EFCore.csproj"
     },
+    "ShopManagement.Infrastructure.InventoryACL/1.0.0": {
+      "type": "project",
+      "path": "../ShopManagement.Infrastructure.InventoryACL/ShopManagement.Infrastructure.InventoryACL.csproj",
+      "msbuildProject": "../ShopManagement.Infrastructure.InventoryACL/ShopManagement.Infrastructure.InventoryACL.csproj"
+    },
     "_0_Framework/1.0.0": {
       "type": "project",
       "path": "../_0_Framework/_0_Framework.csproj",
@@ -10401,6 +10421,7 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "Nancy >= 2.0.0",
       "ShopManagement.Configuration >= 1.0.0",
+      "ShopManagement.Infrastructure.InventoryACL >= 1.0.0",
       "_0_Framework >= 1.0.0"
     ]
   },
@@ -10455,6 +10476,9 @@
             },
             "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj": {
               "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj"
+            },
+            "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Infrastructure.InventoryACL\\ShopManagement.Infrastructure.InventoryACL.csproj": {
+              "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\ShopManagement.Infrastructure.InventoryACL\\ShopManagement.Infrastructure.InventoryACL.csproj"
             },
             "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj": {
               "projectPath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\_0_Framework\\_0_Framework.csproj"
