@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+vmIoE2DmBdEqD18GIqtu8czSCcplZF6a8UFwyrw+EkBsO5jR298DtRqLUqbxna0w1YgPoT/g0dzXOdRNnTHiA==",
+  "dgSpecHash": "xOdh/17mVWvS81MNIp+NHDV49FLhiE4D+fcNCLiCC9OXxUnOvYzqBVwzVhpGdWr5T0r+1R1Q0Zztb8CQrWjRVA==",
   "success": true,
   "projectFilePath": "E:\\asp net core atrya\\Example\\LampShade_Project\\LampShade\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj",
   "expectedPackageFiles": [

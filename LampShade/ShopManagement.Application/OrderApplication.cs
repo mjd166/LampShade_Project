@@ -4,6 +4,7 @@ using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Domain.OrderAgg;
 using ShopManagement.Domain.Services;
 using System;
+using System.Collections.Generic;
 
 namespace ShopManagement.Application
 {
@@ -58,6 +59,11 @@ namespace ShopManagement.Application
             _orderRepository.Create(order);
             _orderRepository.Savechanges();
             return order.Id;
+        }
+
+        public List<OrderViewModel> Search(OrderSearchModel orderSearchModel)
+        {
+            return _orderRepository.Search(orderSearchModel);
         }
     }
 }

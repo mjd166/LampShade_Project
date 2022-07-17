@@ -26,7 +26,7 @@ namespace ShopManagement.Application.Contracts
 
 
         }
-        public PaymentMethod GetBy(int id)
+        public static PaymentMethod GetBy(int id)
         {
             return GetList().FirstOrDefault(x => x.Id == id);
         }
