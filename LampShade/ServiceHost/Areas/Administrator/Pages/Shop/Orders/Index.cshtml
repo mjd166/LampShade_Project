@@ -1,5 +1,5 @@
 ﻿@page
-@using _0_Framework.Application.;
+@using _0_Framework.Application;
 @model ServiceHost.Areas.Administrator.Pages.Shop.Orders.IndexModel
 @{
 }
@@ -27,8 +27,8 @@
 
 
                     <div class="form-group">
-                        <label class="sr-only" asp-for="@Model.SearchModel.IsCanceled"></label>
-                        <input asp-for="@Model.SearchModel.IsCanceled" value="" />
+                        <label asp-for="@Model.SearchModel.IsCanceled">جستجو در لغو شده ها</label>
+                        <input class="form-control" asp-for="@Model.SearchModel.IsCanceled" />
                     </div>
 
 
@@ -73,9 +73,9 @@
                                         <td>@item.Id</td>
                                         <td>@item.AccountFullName</td>
 
-                                        <td>@item.TotalAmount.Tomoney()</td>
-                                        <td>@item.DiscountAmount.Tomoney()</td>
-                                        <td>@item.PaymentMethod.Tomoney()</td>
+                                        <td>@item.TotalAmount.ToMoney()</td>
+                                        <td>@item.DiscountAmount.ToMoney()</td>
+                                        <td>@item.PaymentMethod</td>
                                         <td>@item.PaymentMethod</td>
                                         <td>@item.IssueTrackingNumber</td>
                                         <td>@item.RefId</td>
@@ -89,19 +89,27 @@
                                             }
                                             @if (item.IsPaid)
                                             {
+
+
                                                 <span class="text-success">
                                                     پرداخت شده
+                                                </span>
+                                            }
+                                            @if (!item.IsCanceled && !item.IsPaid)
+                                            {
+                                                <span class="text-warning">
+                                                    در انتظار پرداخت
                                                 </span>
                                             }
                                         </td>
                                         <td>
                                             @if (item.IsPaid == false)
                                             {
-                                                <a class="btn btn-success pull-right m-rl-5" asp-page-handler="Confirm">
+                                                <a class="btn btn-success pull-right m-rl-5" asp-page-handler="Confirm" asp-route-Id="@item.Id">
                                                     <i class="fa fa-check">تایید</i>
                                                 </a>
 
-                                                <a class="btn btn-danger pull-right m-rl-5" asp-page-handler="Cancel">
+                                                <a class="btn btn-danger pull-right m-rl-5" asp-page-handler="Cancel" asp-route-Id="@item.Id">
                                                     <i class="fa fa-close">لغو</i>
                                                 </a>
                                             }

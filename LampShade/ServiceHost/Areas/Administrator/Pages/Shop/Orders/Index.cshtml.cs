@@ -34,9 +34,24 @@ namespace ServiceHost.Areas.Administrator.Pages.Shop.Orders
 
             orders = _orderApplication.Search(searchModel);
         }
-       
-       
+     
+        public IActionResult OnGetConfirm(long Id)
+        {
+            _orderApplication.OrderSucceeded(Id, 0);
+            return RedirectToPage("./Index");
+        }
 
+        public IActionResult OnGetCancel(long id)
+        {
+            _orderApplication.Cancel(id);
+            return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGetItems(long id)
+        {
+            var items = _orderApplication.GetItems(id);
+            return Partial("Items",items);
+        }
        
     }
 }

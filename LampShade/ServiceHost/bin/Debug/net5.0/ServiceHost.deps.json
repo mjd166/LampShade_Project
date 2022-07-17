@@ -2763,6 +2763,7 @@
       },
       "InventoryManagement.Infrastructure.EFCore/1.0.0": {
         "dependencies": {
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
@@ -2828,6 +2829,7 @@
       },
       "ShopManagement.Infrastructure.EFCore/1.0.0": {
         "dependencies": {
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
           "ShopManagement.Domain": "1.0.0"

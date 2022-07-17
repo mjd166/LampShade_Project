@@ -22,9 +22,25 @@ namespace ShopManagement.Application
             _shopInventoryACL = shopInventoryACL;
         }
 
+        public void Cancel(long id)
+        {
+            var order = _orderRepository.Get(id);
+            if (order != null)
+            {
+                order.Cancel();
+                _orderRepository.Savechanges();
+            }
+
+        }
+
         public double GetAmountBy(long id)
         {
             return _orderRepository.GetAmountBy(id);
+        }
+
+        public List<OrderItemViewModel> GetItems(long id)
+        {
+            return _orderRepository.GetItems(id);
         }
 
         public string OrderSucceeded(long orderId,long refId)

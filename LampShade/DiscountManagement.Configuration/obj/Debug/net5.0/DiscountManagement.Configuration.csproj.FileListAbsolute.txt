@@ -27,3 +27,9 @@ E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Con
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\obj\Debug\net5.0\DiscountManagement.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\obj\Debug\net5.0\ref\DiscountManagement.Configuration.dll
 E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\obj\Debug\net5.0\DiscountManagement.Configuration.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
+E:\asp net core atrya\Example\LampShade_Project\LampShade\DiscountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb

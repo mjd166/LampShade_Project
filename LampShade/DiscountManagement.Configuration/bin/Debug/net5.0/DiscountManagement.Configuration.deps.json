@@ -1724,6 +1724,34 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "AccountManagement.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "_0_Framework": "1.0.0"
+        },
+        "runtime": {
+          "AccountManagement.Application.Contracts.dll": {}
+        }
+      },
+      "AccountManagement.Domain/1.0.0": {
+        "dependencies": {
+          "AccountManagement.Application.Contracts": "1.0.0",
+          "_0_Framework": "1.0.0"
+        },
+        "runtime": {
+          "AccountManagement.Domain.dll": {}
+        }
+      },
+      "AccountManagement.Infrastructure.EFCore/1.0.0": {
+        "dependencies": {
+          "AccountManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16"
+        },
+        "runtime": {
+          "AccountManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "DiscountManagement.Application/1.0.0": {
         "dependencies": {
           "DiscountManagement.Application.Contracts": "1.0.0",
@@ -1783,6 +1811,7 @@
       },
       "ShopManagement.Infrastructure.EFCore/1.0.0": {
         "dependencies": {
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.16",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16",
           "ShopManagement.Domain": "1.0.0"
@@ -2933,6 +2962,21 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "AccountManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AccountManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AccountManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DiscountManagement.Application/1.0.0": {
       "type": "project",
