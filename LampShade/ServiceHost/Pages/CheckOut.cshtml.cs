@@ -53,7 +53,7 @@ namespace ServiceHost.Pages
 
         }
 
-        public IActionResult OnPostPay(int paymentMethod)
+        public IActionResult OnGetPay(int paymentMethod)
         {
             var cart = _cartService.Get();
             cart.SetPaymentMethod(paymentMethod);

@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Infrastructure;
+using _01_LampshadeQuery.Contracts;
 using _01_LampshadeQuery.Contracts.Product;
 using _01_LampshadeQuery.Contracts.ProductCategory;
 using _01_LampshadeQuery.Contracts.Slide;
@@ -53,7 +54,7 @@ namespace ShopManagement.Configuration
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IOrderApplication, OrderApplication>();
 
-          
+            services.AddTransient<ICartCalculatorService, CartCalculator>();
 
 
             services.AddSingleton<ICartService, CartService>();

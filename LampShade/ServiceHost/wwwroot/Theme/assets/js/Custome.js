@@ -1,5 +1,5 @@
 ﻿function addToCard(id, name, price, picture) {
-    debugger;
+   
     const cookieName = "cart_items";
 
     let products = $.cookie(cookieName);
@@ -15,7 +15,7 @@
     const count = $("#ProductCount").val();
 
     const CurrentCountProduct = products.find(x => x.id === id);
-    debugger;
+    
     if (CurrentCountProduct !== undefined) {
         products.find(x => x.id === id).count = parseInt(CurrentCountProduct.count) + parseInt(count);
     } else {
@@ -37,7 +37,7 @@
 }
 
 function UpdateCart() {
-    debugger;
+    
     const cookieName = "cart_items";
     let products = $.cookie(cookieName);
 
@@ -81,7 +81,7 @@ function removeFromCard(id) {
     let products = $.cookie(cookieName);
     products = JSON.parse(products);
     if (products !== undefined) {
-        debugger;
+        
 
         let itemToRemove = products.findIndex(x => x.id === id);
 
