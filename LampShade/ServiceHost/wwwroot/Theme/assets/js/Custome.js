@@ -1,4 +1,6 @@
-﻿function addToCard(id, name, price, picture) {
+﻿const { data } = require("jquery");
+
+function addToCard(id, name, price, picture) {
    
     const cookieName = "cart_items";
 
@@ -110,7 +112,34 @@ function changeCartItemCount(id, totalId, count) {
         $.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
         UpdateCart();
 
+        const settings = {
+            "url": "https://localhost:5001/api/inventory",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({ "productId": id, "count": count })
+        };
 
+        $.ajax(settings).done(function (data) {
+            if (data.isStock == false) {
+                const warningsDiv = $('#productStockWarnings');
+                if ($(`#${id}`).length == 0) {
+                    warningsDiv.append(`
+                    <div class="alert alert-warning" id="${id}">
+                        <i class="fa fa-warning"></i> کالای
+                        <strong>${data.productName}</strong>
+                        در انبار کمتر از تعداد درخواستی موجود است.
+                    </div>
+                `);
+                }
+            } else {
+                if ($(`#${id}`).length > 0) {
+                    $(`#${id}`).remove();
+                }
+            }
+        });
     }
    
 

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_LampshadeQuery\01_LampshadeQuery.csproj" />
     <ProjectReference Include="..\InventoryManagement.Application.Contracts\InventoryManagement.Application.Contracts.csproj" />
   </ItemGroup>
 

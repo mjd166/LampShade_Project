@@ -98,6 +98,10 @@ namespace ServiceHost
 
             });
 
+            services.AddCors(options => options.AddPolicy("MyPolicy", builer =>
+            {
+                builer.WithOrigins("https://localhost:5001").AllowAnyHeader().AllowAnyMethod();
+            }));
 
             services.AddRazorPages()
                 .AddMvcOptions(option=>option.Filters.Add<SecurityPageFilter>())
@@ -109,7 +113,8 @@ namespace ServiceHost
                     options.Conventions.AuthorizeAreaFolder("Administrator", "/Accounts", "Account");
                 })
                 .AddApplicationPart(typeof(ProductController).Assembly)
-                .AddApplicationPart(typeof(InventoryController).Assembly);
+                .AddApplicationPart(typeof(InventoryController).Assembly)
+                .AddNewtonsoftJson();
 
 
 
@@ -138,6 +143,8 @@ namespace ServiceHost
 
             app.UseAuthorization();
 
+            app.UseCors("MyPolicy");
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
@@ -145,6 +152,8 @@ namespace ServiceHost
                 // endpoints.MapDefaultControllerRoute();
 
             });
+
+
         }
     }
 }
