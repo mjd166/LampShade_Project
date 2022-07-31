@@ -109,6 +109,8 @@ function changeCartItemCount(id, totalId, count) {
         //products[productIndex].totalPrice = NewPrice;
         $.cookie(cookieName, JSON.stringify(products), { expires: 2, path: "/" });
         UpdateCart();
+
+
     }
    
 

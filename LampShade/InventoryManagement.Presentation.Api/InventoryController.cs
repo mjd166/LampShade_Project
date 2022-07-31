@@ -1,4 +1,6 @@
-﻿using InventoryManagement.Application.Contracts.Inventory;
+﻿using _01_LampshadeQuery.Contracts;
+using _01_LampshadeQuery.Contracts.Inventory;
+using InventoryManagement.Application.Contracts.Inventory;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -9,10 +11,11 @@ namespace InventoryManagement.Presentation.Api
     public class InventoryController : ControllerBase
     {
         private readonly IInventoryApplication _inventoryApplication;
-
-        public InventoryController(IInventoryApplication inventoryApplication)
+        private readonly IInventoryQuery _inventoryQuery;
+        public InventoryController(IInventoryApplication inventoryApplication, IInventoryQuery inventoryQuery)
         {
             _inventoryApplication = inventoryApplication;
+            _inventoryQuery = inventoryQuery;
         }
 
 
@@ -21,5 +24,12 @@ namespace InventoryManagement.Presentation.Api
         {
            return _inventoryApplication.GetOperationLog(Id);
         }
+
+        [HttpPost]
+        public StockStatus CheckStock(IsInStock command)
+        {
+            return _inventoryQuery.CheckStock(command);
+        }
+
     }
 }

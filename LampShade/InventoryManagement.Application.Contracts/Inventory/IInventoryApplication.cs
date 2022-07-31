@@ -16,7 +16,7 @@ namespace InventoryManagement.Application.Contracts.Inventory
 
         List<InventoryOperationViewModel> GetOperationLog(long inventoryId);
 
-       
+      
 
     }
 }
